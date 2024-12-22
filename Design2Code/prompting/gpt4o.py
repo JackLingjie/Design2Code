@@ -7,33 +7,56 @@ from openai import OpenAI, AzureOpenAI
 import argparse
 import retry
 import shutil 
+from gpt_azure import API_INFOS, Openai
 
 @retry.retry(tries=3, delay=2)
 def gpt4o_call(openai_client, base64_image, prompt):
-	response = openai_client.chat.completions.create(
-		model="gpt-4o-2024-05-13",
-		messages=[
-			{
-				"role": "user",
-				"content": [
-					{
-						"type": "text", 
-						"text": prompt
+	model="gpt-4o"
+	messages=[
+		{
+			"role": "user",
+			"content": [
+				{
+					"type": "text", 
+					"text": prompt
+				},
+				{
+					"type": "image_url",
+					"image_url": {
+						"url": f"data:image/jpeg;base64,{base64_image}",
+						"detail": "high"
 					},
-					{
-						"type": "image_url",
-						"image_url": {
-							"url": f"data:image/jpeg;base64,{base64_image}",
-							"detail": "high"
-						},
-					},
-				],
-			}
-		],
-		max_tokens=4096,
-		temperature=0.0,
-		seed=2024
-	)
+				},
+			],
+		}
+	]
+	max_tokens=4096
+	temperature=0.0
+	response = openai_client.get_response_raw(messages=messages, temperature=temperature, max_tokens=max_tokens)
+	# response = openai_client.chat.completions.create(
+	# 	model="gpt-4o-2024-05-13",
+	# 	messages=[
+	# 		{
+	# 			"role": "user",
+	# 			"content": [
+	# 				{
+	# 					"type": "text", 
+	# 					"text": prompt
+	# 				},
+	# 				{
+	# 					"type": "image_url",
+	# 					"image_url": {
+	# 						"url": f"data:image/jpeg;base64,{base64_image}",
+	# 						"detail": "high"
+	# 					},
+	# 				},
+	# 			],
+	# 		}
+	# 	],
+	# 	max_tokens=4096,
+	# 	temperature=0.0,
+	# 	seed=2024
+	# )
 
 	prompt_tokens, completion_tokens, cost = gpt_cost("gpt-4-vision-preview", response.usage)
 	response = response.choices[0].message.content.strip()
@@ -284,18 +307,22 @@ if __name__ == "__main__":
 		total_cost = 0
 
 	## OpenAI API Key
-	with open("/sailhome/lansong/Sketch2Code/api_key.json", "r") as f:
-		api_key = json.load(f)
+	# with open("/sailhome/lansong/Sketch2Code/api_key.json", "r") as f:
+	# 	api_key = json.load(f)
 	
-	openai_client = AzureOpenAI(
-		api_key=api_key["openai_key"],
-		api_version="2023-12-01-preview",
-		azure_endpoint=api_key["openai_endpoint"]
+	# openai_client = AzureOpenAI(
+	# 	api_key=api_key["openai_key"],
+	# 	api_version="2023-12-01-preview",
+	# 	azure_endpoint=api_key["openai_endpoint"]
+	# )
+	# openai_client = 
+	openai_client = Openai(
+		apis=API_INFOS
 	)
- 
-	test_data_dir = "/juice2/scr2/nlp/pix2code/zyanzhe/github_filtered_hard_v0.4_full"
-	cache_dir = "/juice2/scr2/nlp/pix2code/zyanzhe/Pix2Code/hard_v0.4_full/"
-
+	# test_data_dir = "/juice2/scr2/nlp/pix2code/zyanzhe/github_filtered_hard_v0.4_full"
+	# cache_dir = "/juice2/scr2/nlp/pix2code/zyanzhe/Pix2Code/hard_v0.4_full/"
+	test_data_dir = "testset_final"
+	cache_dir = "./saves/"
 
 	if args.prompt_method == "direct_prompting":
 		predictions_dir = cache_dir + "gpt4o_direct_prompting"

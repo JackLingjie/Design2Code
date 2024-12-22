@@ -455,12 +455,12 @@ def visual_eval_v3_multi(input_list, debug=False):
     return_score_list = []
 
     for k, predict_blocks in enumerate(predict_blocks_list):
-         if len(predict_blocks) == 0:
+        if len(predict_blocks) == 0:
                 print("[Warning] No detected blocks in: ", predict_img_list[k])
                 final_clip_score = calculate_clip_similarity_with_blocks(predict_img_list[k], original_img, predict_blocks, original_blocks)
                 return_score_list.append([0.0, 0.2 * final_clip_score, (0.0, 0.0, 0.0, 0.0, final_clip_score)])
                 continue
-            elif len(original_blocks) == 0:
+        elif len(original_blocks) == 0:
                 print("[Warning] No detected blocks in: ", original_img)
                 final_clip_score = calculate_clip_similarity_with_blocks(predict_img_list[k], original_img, predict_blocks, original_blocks)
                 return_score_list.append([0.0, 0.2 * final_clip_score, (0.0, 0.0, 0.0, 0.0, final_clip_score)])

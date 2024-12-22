@@ -1,4 +1,4 @@
-from metrics.visual_score import visual_eval_v3_multi
+from visual_score import visual_eval_v3_multi
 from multiprocessing import Pool
 import contextlib, joblib
 from joblib import Parallel, delayed
@@ -39,12 +39,12 @@ if __name__ == "__main__":
     debug = False
     multiprocessing = True
 
-    orig_reference_dir = "../testset_final"
-    eval_name = "testset_final"
+    orig_reference_dir = "testset_final"
+    eval_name = "gpt4o_direct_prompting"
 
     ## copy the original reference directory to a new directory
     ## because we will be creating new screenshots
-    reference_dir = "../testset_final_" + eval_name
+    reference_dir = "testset_final" + eval_name
     os.makedirs(reference_dir, exist_ok=True)
     for filename in os.listdir(orig_reference_dir):
         if filename.endswith(".html") or filename == "rick.jpg":
@@ -52,8 +52,9 @@ if __name__ == "__main__":
     print ("copied original reference directory to ", reference_dir)
 
     test_dirs = {
-        "gpt4v_direct_prompting": "../predictions_final/gpt4v_direct_prompting",
-        "gemini_direct_prompting": "../predictions_final/gemini_direct_prompting"
+        "gpt4o_direct_prompting": "saves/gpt4o_direct_prompting",
+        # ""
+        # "gemini_direct_prompting": "../predictions_final/gemini_direct_prompting"
     }
 
     file_name_list = []

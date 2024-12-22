@@ -183,3 +183,6 @@ websight_examples/
 testset_final/
 predictions_*/
 **/usage.json
+Design2Code/testset_final
+Design2Code/testset_finalgpt4o_direct_prompting
+Design2Code/saves/gpt4o_direct_prompting
