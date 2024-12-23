@@ -40,7 +40,7 @@ if __name__ == "__main__":
     multiprocessing = True
 
     orig_reference_dir = "testset_final"
-    eval_name = "gpt4o_direct_prompting"
+    eval_name = "qwenvl2_direct_prompting"
 
     ## copy the original reference directory to a new directory
     ## because we will be creating new screenshots
@@ -52,7 +52,9 @@ if __name__ == "__main__":
     print ("copied original reference directory to ", reference_dir)
 
     test_dirs = {
-        "gpt4o_direct_prompting": "saves/gpt4o_direct_prompting",
+        # "gpt4o_direct_prompting": "saves/gpt4o_direct_prompting",
+        "qwenvl2_direct_prompting": "saves/Qwen2-VL-7B-Instruct_direct_prompting",
+        # "llama_direct_prompting": "saves/Llama-3.2-11B-Vision-Instruct_direct_prompting",
         # ""
         # "gemini_direct_prompting": "../predictions_final/gemini_direct_prompting"
     }
