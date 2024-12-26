@@ -167,7 +167,7 @@ if __name__ == "__main__":
     else:
         test_files = [args.file_name]
     # Process files in batches  
-    test_files = test_files[:10]
+    test_files = test_files[:2]
     batch_size = 32  # Adjust the batch size as necessary  
     for i in range(0, len(test_files), batch_size):  
             batch_files = test_files[i:i + batch_size] 
@@ -182,7 +182,7 @@ if __name__ == "__main__":
                         if args.take_screenshot:  
                             take_screenshot(output_filename, output_filename.replace(".html", ".png"), do_it_again=True) 
                     for filename, html in zip(batch_files, raw_responses):  
-                        output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".html", ".txt"))  
+                        output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".txt"))  
                         with open(output_filename, "w") as f:  
                             f.write(html)  
                         print(f'file saved to {output_filename}')   
