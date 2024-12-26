@@ -67,7 +67,7 @@ def open_model_call_batch(model, image_files, prompt):
         ] for img in images_data  
     ]  
       
-    max_tokens = 4096  
+    max_tokens = 8192  
     temperature = 0.0  
     responses = model.generate_batch(messages=messages, temperature=temperature, max_tokens=max_tokens)  
     cleaned_responses = [cleanup_response(response) for response in responses]  

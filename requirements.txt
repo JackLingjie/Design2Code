@@ -44,3 +44,5 @@ nltk
 seaborn
 retry
 pyee
+vllm==0.6.4
+qwen_vl_utils
