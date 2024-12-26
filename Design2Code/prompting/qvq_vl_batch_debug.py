@@ -147,7 +147,10 @@ if __name__ == "__main__":
     if args.model_type == "qvq72":
         from Design2Code.models.vllm_qvq import VllmModel
         model = VllmModel(args.model_path)
-
+        
+    if args.model_type == "qwen2vl":
+        from Design2Code.models.vllm_qwen import VllmModel
+        model = VllmModel(args.model_path)
     test_data_dir = "testset_final"
     cache_dir = "./saves/"
 
