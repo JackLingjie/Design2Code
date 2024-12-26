@@ -181,7 +181,7 @@ if __name__ == "__main__":
                         if args.take_screenshot:  
                             take_screenshot(output_filename, output_filename.replace(".html", ".png"), do_it_again=True) 
                     for filename, html in zip(batch_files, raw_responses):  
-                        output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".txt"))  
+                        output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".html", ".txt"))  
                         with open(output_filename, "w") as f:  
                             f.write(html)  
                         print(f'file saved to {output_filename}')   
