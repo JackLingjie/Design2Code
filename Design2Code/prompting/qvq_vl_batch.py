@@ -131,9 +131,16 @@ if __name__ == "__main__":
     parser.add_argument('--subset', type=str, default='testset_100', help='evaluate on the full testset or just a subset (choose from: {testset_100, testset_full})')
     parser.add_argument('--take_screenshot', action="store_true", help='whether to render and take screenshot of the webpages')
     parser.add_argument('--auto_insertion', type=bool, default=False, help='whether to automatically insert texts into marker positions')
-    parser.add_argument("--model_type", type=str, default="qvq72", help="test model type.")
-    parser.add_argument("--model_name", type=str, default="QVQ-72B-Preview", help="test model name.")
-    parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/QVQ-72B-Preview", help="test model path.")
+    # parser.add_argument("--model_type", type=str, default="qvq72", help="test model type.")
+    # parser.add_argument("--model_name", type=str, default="QVQ-72B-Preview", help="test model name.")
+    # parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/QVQ-72B-Preview", help="test model path.")
+    parser.add_argument("--model_type", type=str, default="qwen2vl", help="test model type.")
+    parser.add_argument("--model_name", type=str, default="Qwen2-VL-7B-Instruct", help="test model name.")
+    parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/Qwen2-VL-7B-Instruct", help="test model path.")
+
+    # parser.add_argument("--model_type", type=str, default="qvq72", help="test model type.")
+    # parser.add_argument("--model_name", type=str, default="QVQ-72B-Preview", help="test model name.")
+    # parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/QVQ-72B-Preview", help="test model path.")
 
     args = parser.parse_args()
 
