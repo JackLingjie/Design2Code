@@ -173,7 +173,8 @@ if __name__ == "__main__":
     for i in range(0, len(test_files), batch_size):  
             batch_files = test_files[i:i + batch_size] 
             try:
-                if args.prompt_method == "direct_prompting":  
+                if args.prompt_method == "direct_prompting": 
+                    print("Begin batch processing!") 
                     htmls = direct_prompting_batch(model, batch_files)  
                     print("Batch processed successfully!")
                     for filename, html in zip(batch_files, htmls):  
