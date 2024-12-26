@@ -136,7 +136,7 @@ if __name__ == "__main__":
         test_files = [item for item in os.listdir(test_data_dir) if item.endswith(".png") and "_marker" not in item]
     else:
         test_files = [args.file_name]
-
+    print(f"test_files:{test_files}")
     # Process files in batches  
     batch_size = 32  # Adjust the batch size as necessary  
     for i in range(0, len(test_files), batch_size):  
