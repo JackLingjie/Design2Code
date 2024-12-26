@@ -167,7 +167,7 @@ if __name__ == "__main__":
     else:
         test_files = [args.file_name]
     print(f"predictions_dir:{predictions_dir}")
-
+    print(f"test_files:{test_files}")
     # Process files in batches  
     batch_size = 32  # Adjust the batch size as necessary  
     for i in range(0, len(test_files), batch_size):  
