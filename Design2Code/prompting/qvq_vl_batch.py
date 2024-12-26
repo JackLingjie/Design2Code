@@ -175,6 +175,7 @@ if __name__ == "__main__":
             try:
                 if args.prompt_method == "direct_prompting":  
                     htmls = direct_prompting_batch(model, batch_files)  
+                    print("Batch processed successfully!")
                     for filename, html in zip(batch_files, htmls):  
                         output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".html"))  
                         with open(output_filename, "w") as f:  
