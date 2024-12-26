@@ -69,9 +69,9 @@ def open_model_call_batch(model, image_files, prompt):
       
     max_tokens = 8192  
     temperature = 0.0  
-    responses = model.generate_batch(messages=messages, temperature=temperature, max_tokens=max_tokens)  
+    responses = model.batch_generate(messages=messages, temperature=temperature, max_tokens=max_tokens)  
     cleaned_responses = [cleanup_response(response) for response in responses]  
-    return cleaned_responses  
+    return cleaned_responses, responses  
 
 def direct_prompting_batch(openai_client, image_files):  
     '''  
@@ -119,9 +119,9 @@ def direct_prompting(openai_client, image_file):
     base64_image = encode_image(image_file)
 
     ## call GPT-4V
-    html = open_model_call(openai_client, base64_image, direct_prompt)
+    html, raw_responses = open_model_call(openai_client, base64_image, direct_prompt)
 
-    return html
+    return html, raw_responses
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -131,26 +131,16 @@ if __name__ == "__main__":
     parser.add_argument('--subset', type=str, default='testset_100', help='evaluate on the full testset or just a subset (choose from: {testset_100, testset_full})')
     parser.add_argument('--take_screenshot', action="store_true", help='whether to render and take screenshot of the webpages')
     parser.add_argument('--auto_insertion', type=bool, default=False, help='whether to automatically insert texts into marker positions')
-    # parser.add_argument("--model_type", type=str, default="qvq72", help="test model type.")
-    # parser.add_argument("--model_name", type=str, default="QVQ-72B-Preview", help="test model name.")
-    # parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/QVQ-72B-Preview", help="test model path.")
-    parser.add_argument("--model_type", type=str, default="qwen2vl", help="test model type.")
-    parser.add_argument("--model_name", type=str, default="Qwen2-VL-7B-Instruct", help="test model name.")
-    parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/Qwen2-VL-7B-Instruct", help="test model path.")
-
-    # parser.add_argument("--model_type", type=str, default="qvq72", help="test model type.")
-    # parser.add_argument("--model_name", type=str, default="QVQ-72B-Preview", help="test model name.")
-    # parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/QVQ-72B-Preview", help="test model path.")
+    parser.add_argument("--model_type", type=str, default="qvq72", help="test model type.")
+    parser.add_argument("--model_name", type=str, default="QVQ-72B-Preview", help="test model name.")
+    parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/QVQ-72B-Preview", help="test model path.")
 
     args = parser.parse_args()
 
     if args.model_type == "qvq72":
         from Design2Code.models.vllm_qvq import VllmModel
         model = VllmModel(args.model_path)
-        
-    if args.model_type == "qwen2vl":
-        from Design2Code.models.vllm_qwen import VllmModel
-        model = VllmModel(args.model_path)
+
     test_data_dir = "testset_final"
     cache_dir = "./saves/"
 
@@ -181,15 +171,20 @@ if __name__ == "__main__":
     for i in range(0, len(test_files), batch_size):  
             batch_files = test_files[i:i + batch_size] 
             try:
-                if args.prompt_method == "direct_prompting": 
-                    htmls = direct_prompting_batch(model, [os.path.join(test_data_dir, f) for f in batch_files])  
+                if args.prompt_method == "direct_prompting":  
+                    htmls, raw_responses = direct_prompting_batch(model, [os.path.join(test_data_dir, f) for f in batch_files])  
                     for filename, html in zip(batch_files, htmls):  
                         output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".html"))  
                         with open(output_filename, "w") as f:  
                             f.write(html)  
                         print(f'file saved to {output_filename}')  
                         if args.take_screenshot:  
-                            take_screenshot(output_filename, output_filename.replace(".html", ".png"), do_it_again=True)  
+                            take_screenshot(output_filename, output_filename.replace(".html", ".png"), do_it_again=True) 
+                    for filename, html in zip(batch_files, raw_responses):  
+                        output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".txt"))  
+                        with open(output_filename, "w") as f:  
+                            f.write(html)  
+                        print(f'file saved to {output_filename}')   
             except Exception as e:  
                 print(f"An error occurred during processing: {e}")  
                 continue
