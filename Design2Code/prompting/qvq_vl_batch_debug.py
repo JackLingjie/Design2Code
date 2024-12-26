@@ -176,7 +176,7 @@ if __name__ == "__main__":
                     htmls, raw_responses = direct_prompting_batch(model, [os.path.join(test_data_dir, f) for f in batch_files])  
                     for filename, html in zip(batch_files, htmls):  
                         output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".html"))  
-                        with open(output_filename, "w", encoding="utf-8")
+                        with open(output_filename, "w", encoding="utf-8"):
                             f.write(html)  
                         print(f'file saved to {output_filename}')  
                         if args.take_screenshot:  
