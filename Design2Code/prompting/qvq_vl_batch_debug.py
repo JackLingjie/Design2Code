@@ -95,8 +95,8 @@ def direct_prompting_batch(openai_client, image_files):
     base64_images = [encode_image(image_file) for image_file in image_files]  
   
     # Call GPT-4V  
-    htmls = open_model_call_batch(openai_client, base64_images, direct_prompt)  
-    return htmls  
+    htmls, responses = open_model_call_batch(openai_client, base64_images, direct_prompt)  
+    return htmls, responses  
 
 def direct_prompting(openai_client, image_file):
     '''
@@ -167,6 +167,7 @@ if __name__ == "__main__":
     else:
         test_files = [args.file_name]
     # Process files in batches  
+    test_files = test_files[:10]
     batch_size = 32  # Adjust the batch size as necessary  
     for i in range(0, len(test_files), batch_size):  
             batch_files = test_files[i:i + batch_size] 
