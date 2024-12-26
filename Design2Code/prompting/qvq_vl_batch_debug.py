@@ -167,7 +167,7 @@ if __name__ == "__main__":
     else:
         test_files = [args.file_name]
     # Process files in batches  
-    test_files = test_files[:2]
+    # test_files = test_files[:2]
     batch_size = 32  # Adjust the batch size as necessary  
     for i in range(0, len(test_files), batch_size):  
             batch_files = test_files[i:i + batch_size] 
