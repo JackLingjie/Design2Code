@@ -15,8 +15,8 @@ from PIL import Image
 # @retry.retry(tries=3, delay=2)
 def open_model_call(model, image_file, prompt):
 	# model="gpt-4o"
-	# image_data = base64.b64decode(base64_image)  
-	# img = Image.open(BytesIO(image_data))
+	image_data = base64.b64decode(image_file)  
+	img = Image.open(BytesIO(image_data))
 	messages=[
 		{
 			"role": "user",
@@ -27,7 +27,7 @@ def open_model_call(model, image_file, prompt):
 				},
 				{
 					"type": "image",
-                    "image": image_file,
+                    "image": img,
 					"min_pixels": 224 * 224,  
 					"max_pixels": 1280 * 28 * 28,  
 				},
@@ -36,34 +36,8 @@ def open_model_call(model, image_file, prompt):
 	]
 	max_tokens=4096
 	temperature=0.0
+	response = ""
 	response = model.generate(messages=messages, temperature=temperature, max_tokens=max_tokens)
-	# response = openai_client.chat.completions.create(
-	# 	model="gpt-4o-2024-05-13",
-	# 	messages=[
-	# 		{
-	# 			"role": "user",
-	# 			"content": [
-	# 				{
-	# 					"type": "text", 
-	# 					"text": prompt
-	# 				},
-	# 				{
-	# 					"type": "image_url",
-	# 					"image_url": {
-	# 						"url": f"data:image/jpeg;base64,{base64_image}",
-	# 						"detail": "high"
-	# 					},
-	# 				},
-	# 			],
-	# 		}
-	# 	],
-	# 	max_tokens=4096,
-	# 	temperature=0.0,
-	# 	seed=2024
-	# )
-
-	# prompt_tokens, completion_tokens, cost = gpt_cost("gpt-4-vision-preview", response.usage)
-	# response = response
 	response = cleanup_response(response)
 
 	return response

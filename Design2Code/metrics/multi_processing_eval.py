@@ -7,6 +7,7 @@ import numpy as np
 import json
 import os
 import shutil
+import argparse
 
 @contextlib.contextmanager
 def tqdm_joblib(tqdm_object):
@@ -36,12 +37,17 @@ def print_multi_score(multi_score):
     print("--------------------------------\n")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Generate code for problems.")
+    parser.add_argument("--eval_name", type=str, default="qwenvl2_direct_prompting", help="Model to eavl")    
+    parser.add_argument("--data_path", type=str, default="saves/Llama-3.2-11B-Vision-Instruct_batch_direct_prompting", help="eval data path")    
+    args = parser.parse_args()
+
     debug = False
     multiprocessing = True
 
     orig_reference_dir = "testset_final"
-    eval_name = "qwenvl2_direct_prompting"
-
+    # eval_name = "qwenvl2_direct_prompting"
+    eval_name = args.eval_name
     ## copy the original reference directory to a new directory
     ## because we will be creating new screenshots
     reference_dir = "testset_final" + eval_name
@@ -53,8 +59,8 @@ if __name__ == "__main__":
 
     test_dirs = {
         # "gpt4o_direct_prompting": "saves/gpt4o_direct_prompting",
-        "qwenvl2_direct_prompting": "saves/Qwen2-VL-7B-Instruct_direct_prompting",
-        # "llama_direct_prompting": "saves/Llama-3.2-11B-Vision-Instruct_direct_prompting",
+        # "qwenvl2_direct_prompting": "saves/Qwen2-VL-7B-Instruct_direct_prompting",
+        eval_name: args.data_path,
         # ""
         # "gemini_direct_prompting": "../predictions_final/gemini_direct_prompting"
     }

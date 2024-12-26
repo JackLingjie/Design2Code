@@ -26,33 +26,7 @@ def open_model_call(model, image_file, prompt):
 	max_tokens=4096
 	temperature=0.0
 	response = model.generate(messages=messages, image_source=image_file, temperature=temperature, max_tokens=max_tokens)
-	# response = openai_client.chat.completions.create(
-	# 	model="gpt-4o-2024-05-13",
-	# 	messages=[
-	# 		{
-	# 			"role": "user",
-	# 			"content": [
-	# 				{
-	# 					"type": "text", 
-	# 					"text": prompt
-	# 				},
-	# 				{
-	# 					"type": "image_url",
-	# 					"image_url": {
-	# 						"url": f"data:image/jpeg;base64,{base64_image}",
-	# 						"detail": "high"
-	# 					},
-	# 				},
-	# 			],
-	# 		}
-	# 	],
-	# 	max_tokens=4096,
-	# 	temperature=0.0,
-	# 	seed=2024
-	# )
 
-	# prompt_tokens, completion_tokens, cost = gpt_cost("gpt-4-vision-preview", response.usage)
-	# response = response
 	response = cleanup_response(response)
 
 	return response
