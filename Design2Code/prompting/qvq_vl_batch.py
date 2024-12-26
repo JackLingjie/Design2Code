@@ -166,17 +166,13 @@ if __name__ == "__main__":
         test_files = [item for item in os.listdir(test_data_dir) if item.endswith(".png") and "_marker" not in item]
     else:
         test_files = [args.file_name]
-    print(f"predictions_dir:{predictions_dir}")
-    print(f"test_files:{test_files}")
     # Process files in batches  
     batch_size = 32  # Adjust the batch size as necessary  
     for i in range(0, len(test_files), batch_size):  
             batch_files = test_files[i:i + batch_size] 
             try:
-                if args.prompt_method == "direct_prompting": 
-                    print("Begin batch processing!") 
-                    htmls = direct_prompting_batch(model, batch_files)  
-                    print("Batch processed successfully!")
+                if args.prompt_method == "direct_prompting":  
+                    htmls = direct_prompting_batch(model, [os.path.join(test_data_dir, f) for f in batch_files])  
                     for filename, html in zip(batch_files, htmls):  
                         output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".html"))  
                         with open(output_filename, "w") as f:  
