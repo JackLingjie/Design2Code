@@ -172,7 +172,7 @@ if __name__ == "__main__":
             batch_files = test_files[i:i + batch_size] 
             try:
                 if args.prompt_method == "direct_prompting":  
-                    htmls = direct_prompting_batch(model, [os.path.join(test_data_dir, f) for f in batch_files])  
+                    htmls, raw_responses = direct_prompting_batch(model, [os.path.join(test_data_dir, f) for f in batch_files])  
                     for filename, html in zip(batch_files, htmls):  
                         output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".html"))  
                         with open(output_filename, "w") as f:  
