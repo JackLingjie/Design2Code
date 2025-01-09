@@ -49,7 +49,8 @@ df['Direct Average'] = df[['Block-Match', 'Text', 'Position', 'Color', 'CLIP']].
 columns = ['Weighted Average', 'Direct Average'] + [col for col in df.columns if col not in ['Weighted Average', 'Direct Average']]  
 df = df[columns]  
   
+df_sorted = df.sort_values(by='Direct Average', ascending=False)
 # Save the DataFrame to a CSV file  
-df.to_csv('all_scores_design2code.csv', index=True)  
+df_sorted.to_csv('all_scores_design2code.csv', index=True)  
   
-print("Results saved to all_scores.csv")  
+print("Results saved to all_scores_design2code.csv")  

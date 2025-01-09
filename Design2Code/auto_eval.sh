@@ -38,7 +38,7 @@ for model_name in "${model_names[@]}"; do
     echo "正在处理模型: $model_name" | tee -a "$log_file"  
   
     # 调用 eval_scripts/auto_eval.sh 并传入 model_name，将输出追加到同一个日志文件  
-    bash eval_scripts/auto_eval.sh "$model_name" 2>&1 | tee -a "$log_file"  
+    bash eval_scripts/auto_eval_merge.sh "$model_name" 2>&1 | tee -a "$log_file"  
 done  
   
 echo "所有模型处理完成。" | tee -a "$log_file"  
