@@ -1,0 +1,1 @@
+pip install -U flash-attn==2.7.2.post1 --no-build-isolation
