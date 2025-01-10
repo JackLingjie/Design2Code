@@ -16,4 +16,4 @@ python3 prompting/qwen_vl_batch_v2.py \
  --model_name ${MODEL_NAME} \
  --model_path /mnt/lingjiejiang/multimodal_code/sft_checkpoints/${MODEL_NAME}
 
-python3 metrics/multi_processing_eval.py --eval_name ${MODEL_NAME} --data_path saves/${MODEL_NAME}_direct_prompting
+python3 metrics/multi_processing_eval.py --eval_name ${MODEL_NAME} --data_path saves/${MODEL_NAME}_v2_direct_prompting
