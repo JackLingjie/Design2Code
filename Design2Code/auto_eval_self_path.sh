@@ -43,7 +43,7 @@ log_file="${log_dir}/${log_file_prefix}.log"
 echo "开始处理所有模型..." | tee -a "$log_file"  
   
 # 循环遍历数组中的每个模型名称  
-for model_name in "${model_names[@]}"; do  
+for model_info in "${model_names[@]}"; do  
     
     IFS=',' read -r model_name model_path <<< "$model_info" 
     echo "正在处理模型: $model_name" | tee -a "$log_file"  
