@@ -3,13 +3,13 @@
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
 
-    "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7660,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7660"
-    "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7000"
-    "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_6000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-6000"
-    "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_5000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-5000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_4000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-4000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-3000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-2000"  
+    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7660,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7660"
+    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7000"
+    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_6000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-6000"
+    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_5000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-5000"
+    "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_4000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-4000"
+    "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-3000"
+    "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-2000"  
 
 
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job/sft/full/checkpoint-3000/"
