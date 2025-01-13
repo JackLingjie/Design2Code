@@ -11,7 +11,7 @@ MODEL_PATH="$2"
 echo "MODEL_NAME: $MODEL_NAME"
 echo "MODEL_PATH: $MODEL_PATH"
 
-python3 prompting/qwen_vl_batch.py \
+python3 prompting/qwen_vl_batch_v2.py \
  --prompt_method direct_prompting \
  --file_name all \
  --subset testset_final \
