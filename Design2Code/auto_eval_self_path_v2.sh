@@ -2,10 +2,10 @@
   
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_1000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-1000/"
-    "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_4248,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-4248/"
-    "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-3000/"
-    "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-2000/"
+    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_1000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-1000/"
+    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_4248,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-4248/"
+    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-3000/"
+    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-2000/"
 
     # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k/sft/full/checkpoint-3000/"
     # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k/sft/full/checkpoint-3363/"
@@ -13,6 +13,10 @@ model_names=(
     # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k_3699,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k/sft/full/checkpoint-3699/"
     # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k/sft/full/checkpoint-3000/"
     
+    "pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_62k_438,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_62k_job/sft/full/checkpoint-438/"
+    "pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job_500,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job/sft/full/checkpoint-500/"
+    "pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job_781,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job/sft/full/checkpoint-781/"
+
     # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7660,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7660"
     # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7000"
     # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_6000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-6000"
