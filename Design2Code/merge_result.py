@@ -23,26 +23,31 @@ metrics_dir = 'metrics'
 for filename in os.listdir(metrics_dir):  
     if filename.startswith('res_dict_') and filename.endswith('.json'):  
         file_path = os.path.join(metrics_dir, filename)  
-        with open(file_path) as f:  
-            data = json.load(f)  
-          
-        # Extract key name from filename  
-        key_name = filename[len('res_dict_'):-len('.json')]  
-          
-        for key, value in data.items():  
-            values = list(value.values())  
-            if len(values) == 0:  
-                print(f"Warning: The list 'values' is empty for key {key} in file {filename}.")  
-                continue  
-            try:  
-                current_res = np.mean(np.array(values), axis=0)  
-                if not isinstance(current_res, (list, np.ndarray)):  
-                    print(f"Warning: 'current_res' is not iterable for key {key} in file {filename}.")  
+        try:  
+            with open(file_path) as f:  
+                data = json.load(f)  
+  
+            # Extract key name from filename  
+            key_name = filename[len('res_dict_'):-len('.json')]  
+  
+            for key, value in data.items():  
+                values = list(value.values())  
+                if not values:  
+                    print(f"Warning: Empty values in file {filename} for key {key}")  
                     continue  
+  
+                current_res = np.mean(np.array(values), axis=0)  
+  
+                if not isinstance(current_res, np.ndarray) or current_res.size < 6:  
+                    print(f"Warning: Insufficient data in file {filename} for key {key}")  
+                    continue  
+  
                 res = get_score(current_res)  
                 all_scores[key_name] = res  
-            except Exception as e:  
-                print(f"Error processing key {key} in file {filename}: {e}")  
+  
+        except (json.JSONDecodeError, KeyError, TypeError) as e:  
+            print(f"Error processing file {filename}: {e}")  
+            continue  
   
 # Convert all_scores to a DataFrame  
 df = pd.DataFrame.from_dict(all_scores, orient='index')  
@@ -54,11 +59,12 @@ df['Weighted Average'] = (df['Intermediate Average'] + df['CLIP']) / 2
 # Calculate the direct average of all columns  
 df['Direct Average'] = df[['Block-Match', 'Text', 'Position', 'Color', 'CLIP']].mean(axis=1)  
   
-# Reorder columns to place 'Weighted Average' and 'Direct Average' as the first columns  
-columns = ['Weighted Average', 'Direct Average'] + [col for col in df.columns if col not in ['Weighted Average', 'Direct Average']]  
+# Reorder columns to place 'Direct Average' and 'Weighted Average' as the first columns  
+columns = ['Direct Average', 'Weighted Average'] + [col for col in df.columns if col not in ['Direct Average', 'Weighted Average']]  
 df = df[columns]  
   
-df_sorted = df.sort_values(by='Direct Average', ascending=False)
+df_sorted = df.sort_values(by='Direct Average', ascending=False)  
+  
 # Save the DataFrame to a CSV file  
 df_sorted.to_csv('all_scores_design2code.csv', index=True)  
   

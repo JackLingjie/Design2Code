@@ -2,6 +2,12 @@
   
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
+    "qwen2_vl_coder-7b_3072_code_pretrain_bsz128_1e5_web2code_job_3000"
+    "qwen2_vl_coder-7b_3072_code_pretrain_bsz128_1e5_web2code_job_4000"
+    "qwen2_vl_coder-7b_3072_code_pretrain_bsz128_1e5_web2code_job_5000"
+    "qwen2_vl_coder-7b_3072_code_pretrain_bsz128_1e5_web2code_job_5820"
+    "qwen2_vl_coder_mn_only-7b_3072_1.5pretrain_bsz128_1e5_web2code_job_5000"
+    "qwen2_vl_coder_mn_only-7b_3072_1.5pretrain_bsz128_1e5_web2code_job_3000"
     # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job"
     # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job_1000"
     # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job_1500"  
@@ -19,8 +25,8 @@ model_names=(
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_1000"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_1500"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_2000"
-    "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_3000"
-    "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_4000"
+    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_3000"
+    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_4000"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_5000"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_6000"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_7000"
