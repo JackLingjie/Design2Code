@@ -5,3 +5,5 @@ python3 metrics/multi_processing_eval.py --eval_name llava_onevision --data_path
 python3 metrics/multi_processing_eval.py --eval_name mini_cpm --data_path saves/MiniCPM-V-2_6_batch_direct_prompting
 
 python3 metrics/multi_processing_eval.py --eval_name qwen2_vl-7b_3072_bsz8_web2code --data_path saves/qwen2_vl-7b_3072_bsz8_web2code_direct_prompting
+
+python3 metrics/multi_processing_eval_filter.py --eval_name webtest 
