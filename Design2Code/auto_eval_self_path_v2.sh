@@ -2,65 +2,22 @@
   
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
+    "pretrain_mm_only-7b_3072_bsz128_1e3_web2code_filter_670k_500,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_web2code_filter_670k/sft/full/checkpoint-500/"
+    "pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed_5820,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed/sft/full/checkpoint-5820/"
+    "pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed_5000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed/sft/full/checkpoint-5000/"
+    "pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed/sft/full/checkpoint-3000/"
+    "pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed/sft/full/checkpoint-2000/"
+    "pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed_1000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_web2code_fixed/sft/full/checkpoint-1000/"
+
     # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_1000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-1000/"
     # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_4248,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-4248/"
     # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-3000/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v2_600k/sft/full/checkpoint-2000/"
 
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k/sft/full/checkpoint-3000/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v3_478k/sft/full/checkpoint-3363/"
-
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k_3699,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k/sft/full/checkpoint-3699/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_v4_526k/sft/full/checkpoint-3000/"
-    
-    "pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_62k_438,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_62k_job/sft/full/checkpoint-438/"
-    "pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job_500,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job/sft/full/checkpoint-500/"
-    "pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job_781,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_pretrain_mix_111k_job/sft/full/checkpoint-781/"
-
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7660,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7660"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_7000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-7000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_6000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-6000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_5000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-5000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_4000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-4000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-3000"
-    # "qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_mm_only-7b_3072_bsz128_1e3_pretrain_llava_stage2_1M_job/sft/full/checkpoint-2000"  
-
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e3_pretrain_mix_114k_job_3072_500,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e3_pretrain_mix_114k_job_3072/sft/full/checkpoint-500/"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e3_pretrain_mix_114k_job_3072_805,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e3_pretrain_mix_114k_job_3072/sft/full/checkpoint-805/"
-
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k_4066,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k/sft/full/checkpoint-4066/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k_4000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k/sft/full/checkpoint-4000/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k_3500,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k/sft/full/checkpoint-3500/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k/sft/full/checkpoint-3000/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k/sft/full/checkpoint-2000/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k_1500,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k/sft/full/checkpoint-1500/"
-    # "pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k_1000,/mnt/lingjiejiang/multimodal_code/exp/saves/pretrain_mm_only-7b_3072_bsz128_1e3_mix_data_ocr_code_pretrain_578k/sft/full/checkpoint-1000/"
-    
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job_3000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job/sft/full/checkpoint-3000/"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job_4000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job/sft/full/checkpoint-4000/"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job_5000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job/sft/full/checkpoint-5000/"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job_6000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job/sft/full/checkpoint-6000/"
     # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job_6000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_mid_lenqi_1M_job/sft/full/checkpoint-7000/"
-
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_1000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-1000"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_1500,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-1500"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-2000"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_2500,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-2500"
-    # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job"
-    # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job_1000"
-    # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job_1500"  
-    # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job_2000"
-    # "qwen2_vl_coder_mn_pretrain_LLM_sft-7b_3072_bsz128_1e4_web2code_job_3000"
-    # "another_model_name_part1_part2" # 可以添加其他模型名称  
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_500,/mnt/lingjiejiang/multimodal_code/sft_checkpoints/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_500"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_1000,/mnt/lingjiejiang/multimodal_code/sft_checkpoints/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_1000"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_1500,/mnt/lingjiejiang/multimodal_code/sft_checkpoints/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_1500"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_2000,/mnt/lingjiejiang/multimodal_code/sft_checkpoints/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_web2code_merger_2000"
-
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_1000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-1000"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_1500,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-1500"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_2000,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-2000"
-    # "qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job_2500,/mnt/lingjiejiang/multimodal_code/exp/saves/qwen2_vl_coder_mn_only-7b_3072_bsz128_1e4_test_job/fullft_1e4/bsz128_epoch1/checkpoint-2500"
 )  
   
 # 确保日志目录存在  
