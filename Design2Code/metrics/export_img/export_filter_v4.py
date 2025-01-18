@@ -5,23 +5,24 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm  
   
 # Define paths  
-html_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html/html_files/"  
-image_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html/images/"  
-json_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html/"  
-json_output_path = os.path.join(json_output_dir, 'miss_item2.json')  
+html_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/html_files/"  
+image_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/images/"  
+json_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/"  
+json_output_path = os.path.join(json_output_dir, 'miss_item4.json')  
   
 # Ensure the directories exist  
 os.makedirs(html_output_dir, exist_ok=True)  
 os.makedirs(image_output_dir, exist_ok=True)  
   
 # Load data from the file  
-html_data_path = "/mnt/unilm/shaohanh/data/code/purehtml_v2.txt"  
+html_data_path = "/mnt/unilm/shaohanh/data/code/purehtml_v4/merged.jsonl"  
 miss_item = []  
   
 with open(html_data_path, "r", encoding="utf-8") as f:  
     lines = f.readlines()  
     data = [json.loads(line) for line in lines]  
-  
+
+# data = data[:10]
 # Function to call the external script to convert HTML file to an image  
 def html_file_to_image(item):  
     html_content = item.get('text')  
