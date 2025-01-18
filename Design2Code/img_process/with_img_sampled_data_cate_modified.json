@@ -1,0 +1,482 @@
+[
+    {
+        "id": "4138",
+        "messages": [
+            {
+                "content": "<image>\nProceed to write HTML code that reflects the image of the provided webpage screenshot. Show code styled following the material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>Artist Showcase</title>\n <style>\n  body {\n font-family: sans-serif;\n font-size: 16px;\n }\n h1 {\n text-align: center;\n }\n nav {\n text-align: center;\n padding: 10px 0;\n background-color: #ebedee;\n }\n nav a {\n color: black;\n text-decoration: none;\n padding: 5px 10px;\n border-radius: 4px;\n transition: background-color 0.3s;\n }\n nav a:hover {\n background-color: #c3c3c3;\n }\n .image-container {\n display: flex;\n flex-wrap: wrap;\n justify-content: space-around;\n }\n .image {\n margin: 20px;\n }\n .image img {\n width: 200px;\n }\n </style>\n</head>\n<body>\n <nav>\n  <a href=\"#\">Home</a>\n  <a href=\"#\">Gallery</a>\n  <a href=\"#\">About</a>\n  <a href=\"#\">Contact</a>\n </nav>\n <h1>Artist Showcase</h1>\n <div class=\"image-container\">\n <div class=\"image\">\n <img src=\"rick.jpg\" alt=\"Painting\">\n <p>Painting</p>\n </div>\n <div class=\"image\">\n <img src=\"rick.jpg\" alt=\"Sculpture\">\n <p>Sculpture</p>\n </div>\n <div class=\"image\">\n <img src=\"rick.jpg\" alt=\"Photography\">\n <p>Photography</p>\n </div>\n <div class=\"image\">\n <img src=\"rick.jpg\" alt=\"Mixed Media\">\n <p>Mixed Media</p>\n </div>\n <div class=\"image\">\n <img src=\"rick.jpg\" alt=\"Drawings\">\n <p>Drawings</p>\n </div>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/4138.png"
+        ]
+    },
+    {
+        "id": "1870",
+        "messages": [
+            {
+                "content": "<image>\nPlease help to draft HTML code replicating the visual design of the webpage shown in the given screenshot. Arrange the code abiding by the principles of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <title>Coding Bootcamp Portal</title>\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n</head>\n<body>\n <header>\n <h1>Welcome to Coding Bootcamp</h1>\n <nav>\n <a href=\"#curriculum\">Curriculum</a>\n <a href=\"#instructors\">Instructors</a>\n <a href=\"#enrollment\">Enrollment</a>\n <a href=\"#resources\">Student Resources</a>\n </nav>\n </header>\n <main>\n <section id=\"curriculum\">\n <h2>Curriculum</h2>\n <h3>Core Courses</h3>\n <ul>\n <li>HTML/CSS Fundamentals</li>\n <li>JavaScript Basics</li>\n <li>Front-end Development</li>\n <li>Back-end Development</li>\n </ul>\n <h3>Elective Courses</h3>\n <ul>\n <li>React Framework</li>\n <li>Node.js</li>\n <li>Database Management</li>\n </ul>\n </section>\n <section id=\"instructors\">\n <h2>Instructors</h2>\n <p>Meet our experienced and passionate team of instructors:</p>\n <div class=\"instructor\">\n <img src=\"rick.jpg\" alt=\"John Smith\">\n <h3>John Smith</h3>\n <p>Front-end Development</p>\n </div>\n <div class=\"instructor\">\n <img src=\"rick.jpg\" alt=\"Mary Kim\">\n <h3>Mary Kim</h3>\n <p>Back-end Development</p>\n </div>\n </section>\n <section id=\"enrollment\">\n <h2>Enrollment</h2>\n <p>Ready to take the next step towards a career in coding? Apply now:</p>\n <form>\n <label for=\"name\">Full Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\" required>\n <label for=\"email\">Email:</label>\n <input type=\"email\" id=\"email\" name=\"email\" required>\n <label for=\"course\">Course of Interest:</label>\n <select id=\"course\" name=\"course\">\n <option value=\"Web Development\">Web Development</option>\n <option value=\"Full Stack Development\">Full Stack Development</option>\n <option value=\"Data Science\">Data Science</option>\n </select>\n <button>Submit</button>\n </form>\n </section>\n <section id=\"resources\">\n <h2>Student Resources</h2>\n <h3>Class Materials</h3>\n <ul>\n <li>Course slides and notes</li>\n <li>Code templates and examples</li>\n <li>Recommended readings and resources</li>\n </ul>\n <h3>Career Services</h3>\n <p>We're dedicated to helping our students succeed in finding their dream job after graduation. Here are some of the resources we offer:</p>\n <ul>\n <li>Resume building workshops</li>\n <li>Mock interviews</li>\n <li>Networking opportunities</li>\n </ul>\n </section>\n </main>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/1870.png"
+        ]
+    },
+    {
+        "id": "3931",
+        "messages": [
+            {
+                "content": "<image>\nFurnish HTML code that mirrors the webpage observed in the provided image. Display the code following the rules of material design aesthetics.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"UTF-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>News Source - Your Trusted News and Media Outlet</title>\n <style>\n  body {\n font-family: 'Montserrat', sans-serif;\n background-color: #fff;\n color: #333;\n }\n h1, h2 {\n color: #222;\n margin-bottom: 20px;\n }\n .top-news {\n display: flex;\n margin-bottom: 30px;\n }\n .top-news img {\n width: 200px;\n height: 150px;\n margin-right: 20px;\n }\n .top-news h3 {\n margin-bottom: 5px;\n font-size: 20px;\n }\n .top-news p {\n color: #555;\n font-size: 16px;\n }\n .featured-articles {\n display: grid;\n grid-template-columns: repeat(3, 1fr);\n gap: 20px;\n }\n .featured-article {\n background-color: #eee;\n padding: 20px;\n border-radius: 5px;\n }\n .featured-article h3 {\n margin-bottom: 10px;\n font-size: 18px;\n }\n .featured-article p {\n color: #555;\n font-size: 16px;\n }\n .search-bar {\n display: flex;\n justify-content: space-between;\n align-items: center;\n margin-bottom: 20px;\n }\n .search-bar input[type=\"text\"] {\n padding: 10px;\n font-size: 16px;\n border-radius: 5px 0 0 5px;\n border: 1px solid #ccc;\n width: 70%;\n }\n .search-bar input[type=\"submit\"] {\n padding: 10px;\n background-color: #222;\n color: #fff;\n border: none;\n cursor: pointer;\n border-radius: 0 5px 5px 0;\n }\n </style>\n</head>\n<body>\n <h1>Welcome to News Source - Your Trusted News and Media Outlet</h1>\n <div class=\"top-news\">\n <img src=\"rick.jpg\" alt=\"Breaking news\">\n <div>\n <h3>Breaking News: Lorem ipsum dolor sit amet</h3>\n <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor dolor, tempor sit amet nisi ut.</p>\n </div>\n </div>\n <h2>Featured Articles:</h2>\n <div class=\"featured-articles\">\n <div class=\"featured-article\">\n <h3>Lorem ipsum dolor sit amet</h3>\n <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac convallis leo.</p>\n </div>\n <div class=\"featured-article\">\n <h3>Sed egestas odio lectus, vitae faucibus sapien semper sed</h3>\n <p>Pellentesque sit amet massa ipsum. Sed vel bibendum nisl, vel sagittis elit.</p>\n </div>\n <div class=\"featured-article\">\n <h3>Nulla ex augue, porta in libero sed, pretium commodo orci</h3>\n <p>Maecenas efficitur lorem sed eros mollis, eu consectetur eros ornare.</p>\n </div>\n </div>\n <div class=\"search-bar\">\n <input type=\"text\" placeholder=\"Search for articles...\">\n <input type=\"submit\" value=\"Search\">\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/3931.png"
+        ]
+    },
+    {
+        "id": "8744",
+        "messages": [
+            {
+                "content": "<image>\nThe provided image displays a website's appearance. How would you emulate this using HTML? Write the code in a style synonymous with material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <title>My Blog</title>\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <style>\n* {\n box-sizing: border-box;\n }\nbody {\n font-family: 'Open Sans', sans-serif;\n color: #555;\n }\nmain {\n max-width: 800px;\n margin: 0 auto;\n }\nh1 {\n text-align: center;\n }\n.post {\n margin-bottom: 50px;\n padding: 20px;\n background-color: #fff;\n border-radius: 4px;\n box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n }\n.featured-image {\n width: 100%;\n height: auto;\n border-radius: 4px;\n margin-bottom: 20px;\n }\n.post h2 {\n font-size: 24px;\n margin-bottom: 10px;\n }\n.post p {\n line-height: 1.5;\n margin-bottom: 10px;\n }\n.author {\n font-size: 14px;\n font-style: italic;\n color: #666;\n }\n </style>\n</head>\n<body>\n<main>\n <h1>Welcome to My Blog</h1>\n <div class=\"post\">\n <img src=\"rick.jpg\" alt=\"Featured Image\" class=\"featured-image\">\n <h2>My First Post</h2>\n <p>Hi everyone! Welcome to my new blog. Excited to share my thoughts and experiences with you.</p>\n <p class=\"author\"><em>Written by: John Doe</em> | 12/24/2020</p>\n </div>\n <div class=\"post\">\n <h2>My Second Post</h2>\n <p>Today, I want to talk about my favorite travel destination. Have you been there?</p>\n <p class=\"author\"><em>Written by: John Doe</em> | 12/28/2020</p>\n </div>\n</main>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/8744.png"
+        ]
+    },
+    {
+        "id": "2379",
+        "messages": [
+            {
+                "content": "<image>\nFormulate the HTML and CSS code to imitate the website's visual and spatial structure given in the screenshot. Grant code characterized by facets of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n <head>\n <style>\n body {\n font-family: 'Helvetica Neue', sans-serif;\n background-color: #f2f2f2;\n }\n header {\n padding: 20px;\n text-align: center;\n }\n .header img {\n width: 200px;\n display: block;\n margin: 0 auto;\n }\n .header h1 {\n margin-top: 10px;\n }\n </style>\n </head>\n <body>\n <header>\n <div class=\"header\">\n <img src=\"rick.jpg\" alt=\"News Platform logo\">\n <h1>Welcome to News Platform</h1>\n </div>\n </header>\n </body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/2379.png"
+        ]
+    },
+    {
+        "id": "2380",
+        "messages": [
+            {
+                "content": "<image>\nUsing the webpage screenshot, create a simulating HTML/CSS code. Present code implemented according to the material design guidelines.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <style>\n body {\n   background-color: #fafafa;\n   font-family: Arial, sans-serif;\n }\n header {\n   background-color: #333;\n   color: #fafafa;\n   padding: 20px;\n }\n nav {\n   display: flex;\n   justify-content: space-between;\n   align-items: center;\n }\n nav a {\n   color: #fafafa;\n   text-decoration: none;\n   padding: 5px 10px;\n   border-radius: 4px;\n   transition: background-color 0.3s;\n }\n nav a:hover {\n   background-color: #555;\n }\n .featured {\n   display: flex;\n   justify-content: space-around;\n   align-items: center;\n   margin-top: 50px;\n }\n .featured h2 {\n   text-align: center;\n }\n .featured img {\n   max-width: 300px;\n }\n .featured p {\n   margin-top: 10px;\n }\n </style>\n</head>\n<body>\n <header>\n <nav>\n <h1>The Art of John Smith</h1>\n <a href=\"#\">Home</a>\n <a href=\"#\">Portfolio</a>\n <a href=\"#\">About</a>\n </nav>\n </header>\n <div class=\"featured\">\n <div>\n <h2>Featured Work</h2>\n <img src=\"rick.jpg\" alt=\"Featured Work 1\">\n <p>Title: \"Sunset in the City\"</p>\n <p>Description: A vibrant and lively depiction of the cityscape.</p>\n </div>\n <div>\n <h2>Featured Work</h2>\n <img src=\"rick.jpg\" alt=\"Featured Work 2\">\n <p>Title: \"Fields of Gold\"</p>\n <p>Description: A tranquil and serene landscape painting.</p>\n </div>\n <div>\n <h2>Featured Work</h2>\n <img src=\"rick.jpg\" alt=\"Featured Work 3\">\n <p>Title: \"Abstract Dreams\"</p>\n <p>Description: A unique and dynamic abstract piece.</p>\n </div>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/2380.png"
+        ]
+    },
+    {
+        "id": "2009",
+        "messages": [
+            {
+                "content": "<image>\nThe image highlights a website's layout. How would you use HTML to achieve the same effects? Run through code coded in the material design pattern.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <title>Product Launch Landing Page</title>\n <meta charset=\"UTF-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <style>\n  body {\n font-family: 'Roboto', sans-serif;\n background-color: #f2f5fa;\n color: #172b4d;\n padding: 30px;\n }\n h1 {\n text-align: center;\n }\n #main-image {\n float: right;\n margin: 0 0 20px 20px;\n }\n #description {\n float: left;\n width: 60%;\n margin: 20px 0;\n }\n #preorder {\n float: left;\n width: 40%;\n text-align: center;\n background-color: #fff;\n border-radius: 5px;\n box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n padding: 20px;\n }\n #preorder label, #preorder input {\n display: block;\n margin: 10px 0;\n }\n #preorder input[type=\"submit\"] {\n padding: 10px 20px;\n background-color: #17a2b8;\n border: none;\n color: #fff;\n cursor: pointer;\n border-radius: 5px;\n }\n </style>\n</head>\n<body>\n <h1>Introducing our new product!</h1>\n <img id=\"main-image\" src=\"rick.jpg\" alt=\"New Product\">\n <div id=\"description\">\n <h2>SmartWrist</h2>\n <p>Stay connected with the world and keep track of your health with our revolutionary smartwatch. Its cutting-edge features and sleek design make it a must-have for anyone on the go.</p>\n </div>\n <div id=\"preorder\">\n <h3>Be the first to pre-order!</h3>\n <form action=\"#\" method=\"post\">\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\" required>\n <label for=\"email\">Email:</label>\n <input type=\"email\" id=\"email\" name=\"email\" required>\n <input type=\"submit\" value=\"Pre-order\">\n </form>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/2009.png"
+        ]
+    },
+    {
+        "id": "3524",
+        "messages": [
+            {
+                "content": "<image>\nBy analyzing the structure of the webpage in the provided screenshot, generate an equivalent HTML code. Showcase code created in harmony with material design aesthetics.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"UTF-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>AI Researcher's Personal Website</title>\n <style>\n * {\n  box-sizing: border-box;\n }\n\n body {\n  font-family: 'Roboto', sans-serif;\n  background-color: #121212;\n  color: #f5f5f5;\n }\n\n .container {\n  max-width: 800px;\n  margin: 20px auto;\n }\n\n h1 {\n  font-size: 40px;\n  text-align: center;\n  margin-bottom: 20px;\n }\n\n p, ul {\n  font-size: 18px;\n  margin-bottom: 10px;\n }\n\n h2 {\n  font-size: 35px;\n  margin-top: 30px;\n }\n\n .project {\n  display: flex;\n  align-items: center;\n  background-color: #fafafa;\n  padding: 10px;\n  margin-bottom: 10px;\n  border-radius: 5px;\n }\n\n .project-image{\n  border-radius: 5px;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n  margin-right: 10px;\n }\n\n .project-info {\n  flex: 1;\n }\n\n .project-info h3 {\n  font-size: 25px;\n  margin-bottom: 5px;\n }\n\n .project-info p {\n  font-size: 18px;\n }\n\n .research-interests {\n  max-width: 400px;\n }\n </style>\n</head>\n<body>\n <div class=\"container\">\n  <h1>AI Researcher's Name</h1>\n  <p>Welcome to my website showcasing my projects and research interests.</p>\n  <h2>Projects</h2>\n  <div class=\"project\">\n   <img src=\"rick.jpg\" alt=\"Project 1 Image\" class=\"project-image\">\n   <div class=\"project-info\">\n    <h3>Project 1 Title</h3>\n    <p>Description of project 1.</p>\n    <ul>\n     <li>Detail 1</li>\n     <li>Detail 2</li>\n     <li>Detail 3</li>\n    </ul>\n   </div>\n  </div>\n  <div class=\"project\">\n   <img src=\"rick.jpg\" alt=\"Project 2 Image\" class=\"project-image\">\n   <div class=\"project-info\">\n    <h3>Project 2 Title</h3>\n    <p>Description of project 2.</p>\n    <ul>\n     <li>Detail 1</li>\n     <li>Detail 2</li>\n     <li>Detail 3</li>\n    </ul>\n   </div>\n  </div>\n  <h2>Research Interests</h2>\n  <p class=\"research-interests\">List of research interests.</p>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/3524.png"
+        ]
+    },
+    {
+        "id": "7580",
+        "messages": [
+            {
+                "content": "<image>\nCreate HTML code to imitate the webpage's structure evident in the given screenshot. Unveil code that robustly upholds the material design ethos.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"UTF-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>Mental Health in the Workplace</title>\n <style>\n body {\n font-family: 'Roboto', sans-serif;\n background-color: #f0f0f0;\n padding: 20px;\n }\n h1 {\n text-align: center;\n }\n p {\n line-height: 1.5;\n }\n img {\n width: 100%;\n margin-bottom: 20px;\n }\n a {\n color: #2e80ec;\n }\n </style>\n</head>\n<body>\n <h1>The Importance of Prioritizing Mental Health in the Workplace</h1>\n <img src=\"rick.jpg\" alt=\"Desk with laptop and stress ball\">\n <p>As someone who works in the field of AI research, I know firsthand how demanding and stressful the tech industry can be. In fact, a recent study showed that AI researchers are among the most stressed workers in the world, with burnout rates over 50%.</p>\n <p>This is why it's crucial for employers in the tech industry, and any industry for that matter, to prioritize their employees' mental well-being. Not only is it the right thing to do, but it also leads to better productivity, creativity, and overall job satisfaction.</p>\n <p>If you're an employer, here are some ways you can cultivate a mentally healthy workplace:</p>\n <ul>\n <li>Encourage breaks and time off</li>\n <li>Provide resources for mental health support</li>\n <li>Foster a culture of open communication and support</li>\n </ul>\n <p>But it's not just up to employers. As employees, we also have a responsibility to take care of our own mental health. This means setting boundaries, prioritizing self-care, and seeking help when needed.</p>\n <img src=\"rick.jpg\" alt=\"Woman practicing self-care\">\n <p>Remember, our mental well-being is just as important as our physical health. By prioritizing it in the workplace, we can create a healthier and happier work environment for everyone.</p>\n <p>If you're interested in learning more about the importance of mental health in the workplace, check out these related articles:</p>\n <ul>\n <li><a href=\"how-to-avoid-burnout\">How to Avoid Burnout in a High-Stress Job</a></li>\n <li><a href=\"yoga-for-stress-relief\">Yoga for Stress Relief: Simple Poses to Practice at Work</a></li>\n <li><a href=\"benefits-of-meditation\">The Benefits of Meditation for Mental Health</a></li>\n </ul>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/7580.png"
+        ]
+    },
+    {
+        "id": "7681",
+        "messages": [
+            {
+                "content": "<image>\nGenerate HTML and CSS code to mimic the layout of the webpage shown in the provided image. Run through code coded in the material design pattern.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"UTF-8\">\n <title>Motivational Speaker</title>\n <style>\n body {\n font-family: 'Arial', sans-serif;\n color: #222;\n }\n header {\n background-color: #333;\n color: #fff;\n text-align: center;\n padding: 20px;\n }\n h1 {\n font-size: 32px;\n margin-top: 10px;\n margin-bottom: 30px;\n }\n .bio {\n display: grid;\n grid-template-columns: 1fr 2fr;\n gap: 20px;\n }\n img {\n width: 100%;\n height: auto;\n }\n .schedule {\n margin-top: 30px;\n background-color: #eee;\n padding: 20px;\n }\n .testimonials {\n display: flex;\n align-items: center;\n gap: 20px;\n margin-top: 30px;\n }\n .testimonial {\n flex: 1;\n }\n .testimonial img {\n width: 100px;\n height: 100px;\n border-radius: 50%;\n object-fit: cover;\n }\n .testimonial p {\n font-weight: bolder;\n }\n </style>\n</head>\n<body>\n <header>\n <h1>Motivational Speaker John Doe</h1>\n </header>\n <div class=\"bio\">\n <img src=\"rick.jpg\" alt=\"Profile Picture\">\n <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed semper magna, sit amet consectetur elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.\n Aliquam in elit finibus, consectetur dui vel, tincidunt tellus. Pellentesque suscipit placerat augue, porta malesuada felis mattis non.</p>\n </div>\n <div class=\"schedule\">\n <h2>Speaking Schedule</h2>\n <ul>\n <li>Date: July 14, 2021 | Location: Chicago, IL</li>\n <li>Date: August 2, 2021 | Location: New York, NY</li>\n </ul>\n </div>\n <div class=\"testimonials\">\n <div class=\"testimonial\">\n <img src=\"rick.jpg\" alt=\"Client's profile picture\">\n <p>\"John Doe's motivational talk changed my life. Highly recommend!\" - Jane Smith</p>\n </div>\n <div class=\"testimonial\">\n <img src=\"rick.jpg\" alt=\"Client's profile picture\">\n <p>\"Thank you John Doe for inspiring me to be my best self.\" - Tom Johnson</p>\n </div>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/new_data/7681.png"
+        ]
+    },
+    {
+        "id": "48761",
+        "messages": [
+            {
+                "content": "<image>\nLay out HTML code to reproduce the same design as the website shown in the screenshot. Help understand code encapsulating the qualities of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n <head>\n <meta charset=\"UTF-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>Personal Blog</title>\n <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n <style>\n  body {\n font-family: Arial, Helvetica, sans-serif;\n color: #333;\n background-color: #fff;\n }\n .profile {\n display: flex;\n align-items: center;\n margin-bottom: 30px;\n }\n .profile img {\n width: 100px;\n height: 100px;\n border-radius: 50%;\n margin-right: 20px;\n object-fit: cover;\n }\n .profile h1 {\n margin: 0;\n font-size: 28px;\n }\n .profile p {\n font-size: 18px;\n margin-top: 10px;\n }\n .profile .fa {\n margin-right: 15px;\n font-size: 24px;\n }\n .posts {\n display: flex;\n flex-direction: column;\n }\n .post {\n margin-bottom: 30px;\n }\n .post h2 {\n margin: 0;\n }\n .post p {\n margin-top: 10px;\n }\n .comment-form {\n display: flex;\n margin-bottom: 30px;\n }\n .comment-input {\n margin-right: 10px;\n }\n .comment-input input[type=\"text\"] {\n width: 200px;\n padding: 5px;\n }\n .comment-button {\n background-color: #4CAF50;\n color: #fff;\n border: none;\n padding: 5px 10px;\n font-size: 16px;\n cursor: pointer;\n }\n .comment-button:hover {\n background-color: #43a047;\n }\n .comments {\n display: flex;\n flex-direction: column;\n }\n .comment {\n display: flex;\n align-items: center;\n margin-bottom: 10px;\n }\n .comment p {\n margin: 0;\n margin-left: 10px;\n }\n </style>\n </head>\n <body>\n <div class=\"profile\">\n <img src=\"rick.jpg\" alt=\"Profile Picture\">\n <div class=\"profile-info\">\n <h1>John Smith</h1>\n <p>Software Developer | Passionate Blogger</p>\n <a href=\"#\"><i class=\"fa fa-facebook\"></i></a>\n <a href=\"#\"><i class=\"fa fa-twitter\"></i></a>\n <a href=\"#\"><i class=\"fa fa-instagram\"></i></a>\n </div>\n </div>\n <div class=\"posts\">\n <div class=\"post\">\n <h2>How to Master Coding with Minimal Effort</h2>\n <p>Published on August 10, 2021</p>\n <p>Coding can be intimidating, but with the right mindset and approach, you can master it with minimal effort. Here are some tips to help you on your coding journey.</p>\n </div>\n <div class=\"post\">\n <h2>The Power of Collaboration in Software Development</h2>\n <p>Published on July 22, 2021</p>\n <p>Collaboration is a crucial element in software development, helping to improve efficiency, creativity, and problem-solving. Here's a closer look at the power of collaboration in the tech industry.</p>\n </div>\n </div>\n <div class=\"comment-form\">\n <div class=\"comment-input\">\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\">\n </div>\n <div class=\"comment-input\">\n <label for=\"email\">Email:</label>\n <input type=\"text\" id=\"email\">\n </div>\n <div class=\"comment-input\">\n <label for=\"comment\">Comment:</label>\n <input type=\"text\" id=\"comment\">\n </div>\n <button class=\"comment-button\">Add Comment</button>\n </div>\n <div class=\"comments\">\n <div class=\"comment\">\n <img src=\"rick.jpg\" alt=\"Profile Picture\">\n <p>John Smith:</p>\n <p>Great article, I found it very helpful!</p>\n </div>\n <div class=\"comment\">\n <img src=\"rick.jpg\" alt=\"Profile Picture\">\n <p>Jane Doe:</p>\n <p>Thanks for sharing your insights on coding!</p>\n </div>\n </div>\n </body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/48761.png"
+        ]
+    },
+    {
+        "id": "1382",
+        "messages": [
+            {
+                "content": "<image>\nThe image highlights a website's layout. How would you use HTML to achieve the same effects? Display code which integrates seamlessly with material design styling.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"utf-8\">\n <title>My Personal Website</title>\n <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n <header>\n <h1>My Personal Website</h1>\n </header>\n <main>\n <h2>About Me</h2>\n <p>I am a passionate writer and photographer, eager to explore the world and document my experiences.</p>\n <h2>Photo Gallery</h2>\n <img src=\"rick.jpg\" alt=\"Photo 1\">\n <img src=\"rick.jpg\" alt=\"Photo 2\">\n <img src=\"rick.jpg\" alt=\"Photo 3\">\n </main>\n <nav>\n <ul>\n <li><a href=\"#about\">About Me</a></li>\n <li><a href=\"#interests\">My Interests</a></li>\n <li><a href=\"#contact\">Contact Me</a></li>\n </ul>\n </nav>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/1382.png"
+        ]
+    },
+    {
+        "id": "29337",
+        "messages": [
+            {
+                "content": "<image>\nScrutinize the image and recreate the interface with implemented HTML. Elucidate code representing concepts from material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>Handmade Jewelry Store</title>\n\t<link href=\"https://fonts.googleapis.com/css?family=Poppins:300,400,700\" rel=\"stylesheet\">\n\t<style>\n\t\tbody {\n\t\t\tfont-family: 'Poppins', sans-serif;\n\t\t\tbackground-color: #ffffff;\n\t\t\tcolor: #2c3239;\n\t\t\tmargin: 0;\n\t\t}\n\t\th1, h2, h3 {\n\t\t\tcolor: #5c4a5c;\n\t\t}\n\t\tnav {\n\t\t\tbackground-color: #f5f2f0;\n\t\t\tpadding: 20px;\n\t\t\ttext-align: center;\n\t\t}\n\t\tnav a {\n\t\t\ttext-decoration: none;\n\t\t\tcolor: #5c4a5c;\n\t\t\tmargin: 0 20px;\n\t\t\tfont-weight: bold;\n\t\t\ttext-transform: uppercase;\n\t\t}\n\t\tnav a:hover {\n\t\t\tcolor: #d4b5d4;\n\t\t}\n\t\t.container {\n\t\t\twidth: 80%;\n\t\t\tmargin: 0 auto;\n\t\t}\n\t\t.products {\n\t\t\tdisplay: flex;\n\t\t\tflex-direction: column;\n\t\t\talign-items: flex-start;\n\t\t\tmargin-top: 50px;\n\t\t}\n\t\t.products div {\n\t\t\tdisplay: flex;\n\t\t\tjustify-content: space-between;\n\t\t\twidth: 100%;\n\t\t\tbackground-color: #f5f2f0;\n\t\t\tpadding: 20px;\n\t\t\tmargin-bottom: 20px;\n\t\t}\n\t\t.products div img {\n\t\t\tmargin-right: 20px;\n\t\t}\n\t\t.products div img, .products div p, .products div span {\n\t\t\tvertical-align: middle;\n\t\t}\n\t\tinput[type='text'] {\n\t\t\tpadding: 10px;\n\t\t\tborder-radius: 5px;\n\t\t\tborder: 1px solid #5c4a5c;\n\t\t\twidth: 30%;\n\t\t\tmargin-bottom: 20px;\n\t\t}\n\t\tinput[type='submit'] {\n\t\t\tbackground-color: #5c4a5c;\n\t\t\tcolor: #ffffff;\n\t\t\tpadding: 10px 20px;\n\t\t\tborder: none;\n\t\t\tborder-radius: 5px;\n\t\t\tcursor: pointer;\n\t\t}\n\t\tinput[type='submit']:hover {\n\t\t\tbackground-color: #d4b5d4;\n\t\t}\n\t\t.shopping-cart {\n\t\t\tposition: absolute;\n\t\t\ttop: 20px;\n\t\t\tright: 20px;\n\t\t\tdisplay: flex;\n\t\t\tflex-direction: column;\n\t\t\talign-items: flex-end;\n\t\t}\n\t\t.shopping-cart img {\n\t\t\twidth: 20px;\n\t\t\tmargin-bottom: -5px;\n\t\t}\n\t\t@media all and (max-width: 768px) {\n\t\t\t.products div {\n\t\t\t\tflex-direction: column;\n\t\t\t\talign-items: flex-start;\n\t\t\t\ttext-align: left;\n\t\t\t}\n\t\t\t.products div img {\n\t\t\t\tmargin-right: 0;\n\t\t\t}\n\t\t\t.shopping-cart {\n\t\t\t\tdisplay: none;\n\t\t\t}\n\t\t}\n\t</style>\n</head>\n<body>\n\t<nav>\n\t\t<h1>Handmade Jewelry Store</h1>\n\t\t<input type=\"text\" placeholder=\"Search\">\n\t\t<a href=\"#\">All</a>\n\t\t<a href=\"#\">Necklaces</a>\n\t\t<a href=\"#\">Bracelets</a>\n\t\t<a href=\"#\">Earrings</a>\n\t\t<a href=\"#\">Rings</a>\n\t\t<div class=\"shopping-cart\">\n\t\t\t<img src=\"rick.jpg\" alt=\"Shopping Cart\">\n\t\t\t<span>0 items</span>\n\t\t</div>\n\t</nav>\n\t<section class=\"container\">\n\t\t<h2>New Arrivals</h2>\n\t\t<div class=\"products\">\n\t\t\t<div>\n\t\t\t\t<img src=\"rick.jpg\" alt=\"Necklace\">\n\t\t\t\t<p>Gold Leaf Necklace</p>\n\t\t\t\t<span>$30</span>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<img src=\"rick.jpg\" alt=\"Bracelet\">\n\t\t\t\t<p>Beaded Bracelet</p>\n\t\t\t\t<span>$25</span>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<img src=\"rick.jpg\" alt=\"Earrings\">\n\t\t\t\t<p>Feather Earrings</p>\n\t\t\t\t<span>$20</span>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<img src=\"rick.jpg\" alt=\"Ring\">\n\t\t\t\t<p>Silver Dainty Ring</p>\n\t\t\t\t<span>$15</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<input type=\"submit\" value=\"View More\">\n\t</section>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/29337.png"
+        ]
+    },
+    {
+        "id": "23272",
+        "messages": [
+            {
+                "content": "<image>\nGiven the image, frame your HTML to match the webpage’s design. Present code implemented according to the material design guidelines.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"utf-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>Business Website with Shopping Cart</title>\n <style>\n  body {\n   font-family: Arial, sans-serif;\n   background-color: #ffffff;\n   color: #333333;\n  }\n  h2 {\n   margin-top: 50px;\n  }\n  nav {\n   display: flex;\n   justify-content: space-around;\n   padding: 10px 0;\n  }\n  nav a {\n   color: #333333;\n   text-decoration: none;\n   padding: 5px 10px;\n   border-radius: 4px;\n   transition: background-color 0.3s;\n  }\n  nav a:hover {\n   background-color: #a6a6a6;\n  }\n  .product-card {\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   border: 2px solid #a6a6a6;\n   border-radius: 10px;\n   margin: 10px;\n   padding: 10px;\n  }\n  .product-card img {\n   width: 100%;\n   max-width: 200px;\n   height: auto;\n   border-radius: 10px;\n   box-shadow: 0 4px 8px rgba(0,0,0,0.1);\n  }\n  .product-card h3 {\n   margin: 10px 0;\n  }\n  .product-card button {\n   margin: 10px 0;\n   padding: 8px 12px;\n   border-radius: 4px;\n   border: none;\n   background-color: #2d862d;\n   color: #ffffff;\n   cursor: pointer;\n   transition: all 0.3s;\n  }\n  .product-card button:hover {\n   background-color: #1e6521;\n  }\n </style>\n</head>\n<body>\n <h1>Welcome to Our Business Website!</h1>\n <nav>\n <a href=\"#services\">Services</a>\n <a href=\"#products\">Products</a>\n <a href=\"#about\">About Us</a>\n <a href=\"#contact\">Contact</a>\n </nav>\n <h2 id=\"services\">Our Services</h2>\n <p>Service 1:</p>\n <p>Service 2:</p>\n <p>Service 3:</p>\n <h2 id=\"products\">Our Products</h2>\n <div class=\"product-card\">\n  <img src=\"rick.jpg\" alt=\"Product 1\">\n  <h3>Product 1</h3>\n  <p>Description of product 1.</p>\n  <button>Add to Cart</button>\n </div>\n <div class=\"product-card\">\n  <img src=\"rick.jpg\" alt=\"Product 2\">\n  <h3>Product 2</h3>\n  <p>Description of product 2.</p>\n  <button>Add to Cart</button>\n </div>\n <div class=\"product-card\">\n  <img src=\"rick.jpg\" alt=\"Product 3\">\n  <h3>Product 3</h3>\n  <p>Description of product 3.</p>\n  <button>Add to Cart</button>\n </div>\n <h2 id=\"about\">About Us</h2>\n <p>About our business:</p>\n <p>Our mission:</p>\n <p>Meet our team:</p>\n <h2 id=\"contact\">Contact Us</h2>\n <p>Phone:</p>\n <p>Email:</p>\n <p>Address:</p>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/23272.png"
+        ]
+    },
+    {
+        "id": "16054",
+        "messages": [
+            {
+                "content": "<image>\nBased on the original web design shown, construct the matching HTML code. Demonstrate the code following the methodology of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <title>My Shop</title>\n <style>\n  body {\n font-family: Arial, sans-serif;\n background-color: #fff;\n }\n nav ul {\n list-style-type: none;\n }\n nav a {\n text-decoration: none;\n margin: 0 10px;\n }\n header {\n text-align: center;\n }\n .categories {\n display: flex;\n justify-content: space-around;\n padding: 20px;\n border-bottom: 1px solid #e6e6e6;\n }\n .category {\n font-size: 18px;\n font-weight: bold;\n color: #444;\n cursor: pointer;\n transition: color 0.3s;\n }\n .category:hover {\n color: #6bbbe7;\n }\n section {\n display: inline-block;\n text-align: center;\n margin: 50px 20px;\n border: 1px solid #ccc;\n padding: 20px;\n }\n .item {\n display: inline-block;\n margin: 0 10px;\n }\n img {\n width: 100%;\n height: auto;\n }\n h3 {\n margin: 10px 0;\n }\n p {\n color: #555;\n }\n </style>\n</head>\n<body>\n <header>\n <h1>Welcome to My Shop</h1>\n <nav>\n <ul>\n <li><a href=\"#\">Home</a></li>\n <li><a href=\"#\">About</a></li>\n <li><a href=\"#\">Contact</a></li>\n </ul>\n </nav>\n <div class=\"categories\">\n <h2 class=\"category\">Women's Clothing</h2>\n <h2 class=\"category\">Men's Clothing</h2>\n <h2 class=\"category\">Kids' Clothing</h2>\n </div>\n </header>\n <section>\n <div class=\"item\">\n <img src=\"rick.jpg\" alt=\"Blue dress\">\n <h3>Blue Dress</h3>\n <p>$50</p>\n </div>\n <div class=\"item\">\n <img src=\"rick.jpg\" alt=\"Striped top\">\n <h3>Striped Top</h3>\n <p>$30</p>\n </div>\n <div class=\"item\">\n <img src=\"rick.jpg\" alt=\"Floral skirt\">\n <h3>Floral Skirt</h3>\n <p>$40</p>\n </div>\n </section>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/16054.png"
+        ]
+    },
+    {
+        "id": "34913",
+        "messages": [
+            {
+                "content": "<image>\nAfter scrutinizing the webpage screenshot provided, craft HTML code for a similar responsive layout. Generate code that compliments the architecture of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <style>\n  body {\n   font-family: 'Montserrat', sans-serif;\n   color: #303030;\n   background-color: #fff;\n  }\n  h1 {\n   text-align: center;\n   font-size: 32px;\n   margin-bottom: 30px;\n  }\n  .packages {\n   display: flex;\n   justify-content: space-around;\n   margin-top: 50px;\n   max-width: 1000px;\n   margin: 0 auto;\n  }\n  .package {\n   width: 300px;\n   background-color: #f5f5f5;\n   padding: 20px;\n   border-radius: 5px;\n   box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n   text-align: center;\n  }\n  img {\n   width: 200px;\n   border-radius: 50%;\n   margin-bottom: 20px;\n  }\n  h2 {\n   font-size: 24px;\n   margin-bottom: 20px;\n  }\n  .duration {\n   font-size: 18px;\n   margin-bottom: 10px;\n  }\n  .price {\n   font-size: 20px;\n   font-weight: 700;\n  }\n </style>\n</head>\n<body>\n <h1>Get Fit and Rejuvenate at our Retreat!</h1>\n <div class=\"packages\">\n <div class=\"package\">\n <img src=\"rick.jpg\" alt=\"Yoga session\">\n <h2>Yoga Package</h2>\n <p class=\"duration\">3 days, 2 nights</p>\n <p>Includes daily yoga sessions, meditation, and healthy meal plan.</p>\n <p class=\"price\">$499</p>\n </div>\n <div class=\"package\">\n <img src=\"rick.jpg\" alt=\"Hike in nature\">\n <h2>Nature Package</h2>\n <p class=\"duration\">4 days, 3 nights</p>\n <p>Includes guided hikes in the nearby mountains and daily wellness workshops.</p>\n <p class=\"price\">$599</p>\n </div>\n <div class=\"package\">\n <img src=\"rick.jpg\" alt=\"Spa treatment\">\n <h2>Spa Package</h2>\n <p class=\"duration\">2 days, 1 night</p>\n <p>Indulge in spa treatments, nutrition consultations, and yoga sessions during your stay.</p>\n <p class=\"price\">$399</p>\n </div>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/34913.png"
+        ]
+    },
+    {
+        "id": "23695",
+        "messages": [
+            {
+                "content": "<image>\nProvided the webpage screenshot, generate a copycat HTML code. Grant code characterized by facets of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"utf-8\">\n <meta name=\"viewport\" content=\"width=850, initial-scale=1\">\n <title>Foodie Eats - Delicious Recipes</title>\n <style>\n body {\n font-family: 'Roboto', sans-serif;\n background-color: #fff;\n color: #222;\n }\n h1 {\n font-size: 36px;\n text-align: center;\n }\n .search-bar {\n display: block;\n width: 80%;\n max-width: 800px;\n margin: 20px auto;\n padding: 10px;\n border: 2px solid #01b4e4;\n font-size: 18px;\n border-radius: 10px;\n }\n .carousel {\n display: flex;\n flex-wrap: nowrap;\n overflow: auto;\n margin: 0 -10px;\n }\n .carousel img {\n margin: 0 10px;\n width: 300px;\n height: 300px;\n object-fit: cover;\n border-radius: 10px;\n }\n </style>\n</head>\n<body>\n <h1>Welcome to Foodie Eats</h1>\n <input type=\"text\" class=\"search-bar\" placeholder=\"Search for recipes...\">\n <div class=\"carousel\">\n <img src=\"rick.jpg\" alt=\"Crispy Chicken Parmesan\">\n <img src=\"rick.jpg\" alt=\"Creamy Garlic Shrimp Scampi\">\n <img src=\"rick.jpg\" alt=\"Mushroom Pizza with Truffle Oil\">\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/23695.png"
+        ]
+    },
+    {
+        "id": "12264",
+        "messages": [
+            {
+                "content": "<image>\nWrite HTML code that emulates the structure of the visible web interface in the screenshot. Provide code organized around the norms of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"UTF-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>Community Forum</title>\n <style>\n  body {\n font-family: 'Arial', sans-serif;\n background-color: #fafafa;\n color: #333;\n }\n .forum-categories {\n display: flex;\n max-width: 800px;\n margin: auto;\n }\n .category {\n flex: 1;\n margin: 10px;\n background-color: #f2f2f2;\n border: 1px solid #ccc;\n padding: 20px;\n text-align: center;\n }\n .category-title {\n font-size: 20px;\n font-weight: bold;\n margin-bottom: 10px;\n }\n .user-profile {\n display: flex;\n max-width: 800px;\n margin: auto;\n }\n .profile-image {\n width: 80px;\n height: 80px;\n border-radius: 50%;\n object-fit: cover;\n margin-right: 20px;\n }\n .username {\n font-size: 18px;\n font-weight: bold;\n margin-top: 10px;\n }\n .bio {\n font-size: 16px;\n margin-top: 10px;\n }\n .post {\n margin-top: 20px;\n }\n .post-title {\n font-size: 18px;\n font-weight: bold;\n }\n .post-content {\n margin-bottom: 10px;\n }\n .comment {\n margin-left: 50px;\n }\n .comment-content {\n font-size: 16px;\n margin-bottom: 5px;\n }\n </style>\n</head>\n<body>\n <h1>Welcome to the Community Forum</h1>\n <h2>Categories:</h2>\n <div class=\"forum-categories\">\n <div class=\"category\">\n <div class=\"category-title\">General Discussion</div>\n <p>Join the conversation and discuss anything and everything.</p>\n </div>\n <div class=\"category\">\n <div class=\"category-title\">Technical Support</div>\n <p>Need help with something? Ask for support here.</p>\n </div>\n <div class=\"category\">\n <div class=\"category-title\">Gaming</div>\n <p>Share your gaming experiences and connect with other gamers.</p>\n </div>\n </div>\n <h2>User Profiles:</h2>\n <div class=\"user-profile\">\n <img src=\"rick.jpg\" alt=\"Profile Picture\" class=\"profile-image\">\n <div>\n   <div class=\"username\">User1234</div>\n   <div class=\"bio\">\"Avid gamer and tech enthusiast.\"</div>\n   <div class=\"post\">\n     <div class=\"post-title\">My Gaming Setup</div>\n     <div class=\"post-content\">\"Check out my new gaming rig and share yours too!\"</div>\n     <div class=\"comment\">\n       <div class=\"comment-content\">\"Wow, that's an impressive setup!\"</div>\n       <div class=\"comment-content\">\"Thanks! I put a lot of effort into it.\"</div>\n     </div>\n   </div>\n </div>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/12264.png"
+        ]
+    },
+    {
+        "id": "174",
+        "messages": [
+            {
+                "content": "<image>\nAfter scrutinizing the webpage screenshot provided, craft HTML code for a similar responsive layout. Construct code influenced by principles of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"UTF-8\">\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n <title>Samantha's Kitchen</title>\n <style>\n  * {\n font-family: 'Verdana', sans-serif;\n }\n body {\n background-color: #ffd9d9;\n }\n ul {\n display: flex;\n justify-content: space-around;\n margin-bottom: 10px;\n list-style: none;\n }\n ul li {\n padding: 10px;\n }\n a img {\n width: 200px;\n height: 200px;\n border-radius: 50%;\n transition: opacity 0.3s;\n }\n a img:hover {\n opacity: 0.7;\n }\n p {\n font-size: 18px;\n line-height: 1.5;\n }\n .testimonials {\n border-top: 2px solid #e66f6f;\n border-bottom: 2px solid #e66f6f;\n padding: 10px;\n }\n </style>\n</head>\n<body>\n <header>\n <h1>Welcome to Samantha's Kitchen</h1>\n <nav>\n <ul>\n <li><a href=\"#\">About</a></li>\n <li><a href=\"#\">Recipes</a></li>\n <li><a href=\"#\">Contact</a></li>\n </ul>\n </nav>\n </header>\n <main>\n <section>\n <h2>About Me</h2>\n <p>I'm Samantha, a passionate foodie and recipe developer. Follow me on my culinary adventures!</p>\n </section>\n <section>\n <h2>Recipes</h2>\n <a href=\"#\">\n <img src=\"rick.jpg\" alt=\"Creamy Mushroom Risotto\">\n <p>Creamy Mushroom Risotto</p>\n </a>\n <a href=\"#\">\n <img src=\"rick.jpg\" alt=\"Chocolate Raspberry Cake\">\n <p>Chocolate Raspberry Cake</p>\n </a>\n </section>\n <section class=\"testimonials\">\n <h2>Testimonials</h2>\n <p>\"Samantha's recipes are delicious and easy to follow!\" - John</p>\n <p>\"I tried her chocolate cake and it was a hit at my party!\" - Emily</p>\n <p>\"Thank you for sharing your love for food with us!\" - David</p>\n </section>\n</main>\n <footer>\n <p>© 2021 Samantha's Kitchen. All rights reserved.</p>\n </footer>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/174.png"
+        ]
+    },
+    {
+        "id": "6930",
+        "messages": [
+            {
+                "content": "<image>\nCreate an HTML to represent the structure seen in the webpage image provided. Supply code shaped by adherence to the foundations of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<!DOCTYPE html>\n<html>\n<head>\n <meta charset=\"UTF-8\">\n <title>Green Living Co. Store</title>\n <style>\n  body {\n font-family: 'Open Sans', sans-serif;\n background-color: #fff;\n color: #333;\n }\n .container {\n display: flex;\n flex-wrap: wrap;\n justify-content: center;\n align-items: center;\n }\n .product {\n width: 300px;\n margin: 20px;\n }\n img {\n width: 100%;\n height: auto;\n margin-bottom: 10px;\n }\n h2 {\n margin-bottom: 5px;\n font-size: 18px;\n }\n .price {\n font-size: 16px;\n margin-bottom: 10px;\n }\n p {\n font-size: 14px;\n }\n button {\n display: block;\n padding: 10px 15px;\n background-color: #5CB85C;\n border: none;\n color: white;\n cursor: pointer;\n border-radius: 5px;\n font-size: 16px;\n transition: background-color 0.3s;\n }\n button:hover {\n background-color: #449D44;\n }\n .cart {\n padding: 20px;\n background-color: #F5F5F5;\n border: 1px solid #ccc;\n border-radius: 5px;\n margin-top: 30px;\n }\n ul {\n list-style: none;\n margin: 0;\n padding: 0;\n }\n li {\n margin-bottom: 10px;\n }\n .total {\n font-weight: bold;\n }\n .checkout {\n margin-top: 20px;\n display: block;\n padding: 10px 15px;\n background-color: #428BCA;\n border: none;\n color: white;\n cursor: pointer;\n border-radius: 5px;\n font-size: 16px;\n transition: background-color 0.3s;\n }\n .checkout:hover {\n background-color: #3071A9;\n }\n </style>\n</head>\n<body>\n <h1>Welcome to Green Living Co.</h1>\n <div class=\"container\">\n <div class=\"product\">\n <img src=\"rick.jpg\" alt=\"Reusable bamboo straws\">\n <h2>Reusable Bamboo Straws</h2>\n <p class=\"price\">$8.99</p>\n <p>Reduce waste and help the environment by replacing plastic straws with our reusable bamboo straws.</p>\n <button>Add to Cart</button>\n </div>\n <div class=\"product\">\n <img src=\"rick.jpg\" alt=\"Bamboo toothbrushes\">\n <h2>Bamboo Toothbrushes</h2>\n <p class=\"price\">$5.99</p>\n <p>Upgrade your oral care routine with our sustainable and biodegradable bamboo toothbrushes.</p>\n <button>Add to Cart</button>\n </div>\n <div class=\"product\">\n <img src=\"rick.jpg\" alt=\"Reusable grocery bags\">\n <h2>Reusable Grocery Bags</h2>\n <p class=\"price\">$12.99</p>\n <p>Ditch single-use plastic bags and shop sustainably with our durable and eco-friendly reusable grocery bags.</p>\n <button>Add to Cart</button>\n </div>\n </div>\n <div class=\"cart\">\n <h2>Shopping Cart</h2>\n <ul>\n <li>Reusable Bamboo Straws - <span class=\"price\">$8.99</span></li>\n <li>Bamboo Toothbrushes - <span class=\"price\">$5.99</span></li>\n <li>Reusable Grocery Bags - <span class=\"price\">$12.99</span></li>\n </ul>\n <p class=\"total\">Total: $27.97</p>\n <button class=\"checkout\">Secure Checkout</button>\n </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/generated_images/6930.png"
+        ]
+    },
+    {
+        "id": "848_40",
+        "messages": [
+            {
+                "content": "<image>\nFrom a provided image of a webpage, design an HTML to mimic its layout. See code drafted respecting the canons of material design.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nbody {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    margin: 0;\n    padding: 0;\n    font-family: Arial, sans-serif;\n}\n\n/* Banner */\n#banner {\n    width: 100%;\n    height: 300px;\n    background-color: #f5f5f5;\n    margin-bottom: 20px;\n}\n\n/* Search Bar */\n#search-bar {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n#search-bar > input {\n    padding: 10px;\n    font-size: 16px;\n    width: 250px;\n}\n#search-bar > button {\n    padding: 10px;\n    font-size: 16px;\n    margin-left: 10px;\n}\n\n/* Aside */\naside {\n    position: absolute;\n    right: 20px;\n    top: 50%;\n    transform: translateY(-50%);\n    background-color: #f5f5f5;\n    padding: 20px;\n}\nli > a {\n    display: block;\n    margin-bottom: 10px;\n}\n\n/* Main */\nmain {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin-top: 20px;\n    padding: 20px;\n}\np {\n    text-align: center;\n}\n\n/* Destination Images */\n#destination-images > .image {\n    width: 300px;\n    height: 200px;\n    margin-bottom: 20px;\n    background-color: #f5f5f5;\n}\n</style>\n<body>\n        <header>\n            <img id=\"banner\" src=\"rick.jpg\" alt=\"Travel Agency Banner\">\n            <form id=\"search-bar\">\n                <input type=\"text\" placeholder=\"Where do you want to travel?\">\n                <button type=\"submit\">Search</button>\n            </form>\n        </header>\n        \n        <aside>\n            <h3>Popular Destinations</h3>\n            <ul>\n                <li><a href=\"#\">Europe</a></li>\n                <li><a href=\"#\">Asia</a></li>\n                <li><a href=\"#\">North America</a></li>\n                <!-- More destinations will be added here -->\n            </ul>\n        </aside>\n        \n        <main>\n            <p>Welcome to our travel agency website dedicated to making your dreams come true. With us, you can discover your next destination in style. Start your journey with us today.</p>\n            <p>At our travel agency, we specialize in creating unforgettable experiences for our clients. Book now and design your journey of a lifetime.</p>\n            <div id=\"destination-images\">\n                <div class=\"image\" id=\"destination1\"></div>\n                <div class=\"image\" id=\"destination2\"></div>\n                <div class=\"image\" id=\"destination3\"></div>\n            </div>\n        </main>\n    </body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_848_40.png"
+        ]
+    },
+    {
+        "id": "10650_69",
+        "messages": [
+            {
+                "content": "<image>\nConsider the presented webpage snapshot, make HTML to clone its layout and presentation. Show code styled following the material design.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nbody {\n    margin: 0;\n    padding: 0;\n    font-family: Arial, sans-serif;\n}\n\nnav {\n    background-color: #333;\n    color: #fff;\n    padding: 1em;\n    text-align: left;\n}\n\nnav a {\n    color: #fff;\n    margin-right: 1em;\n    text-decoration: none;\n}\n\nheader {\n    background-color: #f0f0f0;\n    padding: 2em 0;\n    text-align: center;\n}\n\nheader img {\n    width: 300px;\n    height: 200px;\n    background-color: #ccc;\n    margin-bottom: 1em;\n}\n\nheader .tickets {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    background-color: #f00;\n    color: #fff;\n    padding: 1em;\n    text-decoration: none;\n}\n\naside {\n    width: 30%;\n    float: right;\n    padding: 1em;\n    background-color: #f0f0f0;\n}\n\narticle {\n    margin-bottom: 1em;\n}\n\narticle h2 {\n    margin-bottom: 0.5em;\n}\n</style>\n<body>\n    <nav>\n        <a href=\"#\">Home</a>\n        <a href=\"#\">About</a>\n        <a href=\"#\">News</a>\n        <a href=\"#\">Tickets</a>\n        <a href=\"#\">Merchandise</a>\n    </nav>\n    <header>\n        <img src=\"rick.jpg\" alt=\"Team Logo and Players\">\n        <a href=\"#\" class=\"tickets\">Buy Tickets</a>\n    </header>\n    <main>\n        <aside>\n            <article>\n                <h2>News Update 1</h2>\n                <p>This is the first news update.</p>\n            </article>\n            <article>\n                <h2>Player Profile</h2>\n                <p>This is the player profile.</p>\n            </article>\n        </aside>\n    </main>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_10650_69.png"
+        ]
+    },
+    {
+        "id": "9669_43",
+        "messages": [
+            {
+                "content": "<image>\nAfter examining the webpage in the screenshot, generate corresponding HTML code. Deliver code according to the mechanisms of the material design value.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nbody {\n    font-family: Arial, sans-serif;\n    margin: 0;\n    padding: 0;\n    background-color: #f0f0f0;\n}\n\n.container {\n    width: 80%;\n    margin: 0 auto;\n}\n\nnav ul {\n    list-style-type: none;\n}\n</style>\n<body>\n    <header class=\"header\">\n        <img src=\"rick.jpg\" alt=\"Charitable Organization Logo\">\n        <nav>\n            <ul>\n                <li><a href=\"#stories\">Stories</a></li>\n                <li><a href=\"#donate\">Donate</a></li>\n                <li><a href=\"#volunteer\">Volunteer</a></li>\n            </ul>\n        </nav>\n    </header>\n    <section id=\"stories\">\n        <h2>Our Impact Stories</h2>\n        <p>These are some of our impact stories...</p>\n        <img src=\"rick.jpg\" alt=\"Story 1\">\n        <img src=\"rick.jpg\" alt=\"Story 2\">\n    </section>\n    <section id=\"donate\">\n        <h2>Donate Today</h2>\n        <p>Help us make a difference today...</p>\n        <a href=\"donate.html\" class=\"button\">Donate Now</a>\n    </section>\n    <section id=\"volunteer\">\n        <h2>Volunteer Opportunities</h2>\n        <p>We are always in need of volunteers...</p>\n        <a href=\"volunteer.html\" class=\"button\">Join our Team</a>\n    </section>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_9669_43.png"
+        ]
+    },
+    {
+        "id": "2440_66",
+        "messages": [
+            {
+                "content": "<image>\nGenerate HTML corresponding to the webpage in the given image. Present the script that reflects the spirit of the material design system.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nbody {\n  font-family: Arial, sans-serif;\n  color: #444;\n}\n\na {\n  color: #FF6347;\n  text-decoration: none;\n}\n\nnav {\n  background-color: #3CB371;\n  color: #FFFAFA;\n  overflow: hidden;\n  padding: 10px;\n}\n\nnav ul {\n  list-style-type: none;\n  padding: 0;\n}\n\nnav li {\n  float: left;\n  padding: 10px;\n}\n\nnav li a {\n  color: #FFFAFA;\n}\n\n.slider {\n  background-color: #FFD700;\n  height: 200px;\n  margin: 10px;\n}\n\n.content {\n  width: 70%;\n  float: right;\n}\n\n.colOne {\n  width: 30%;\n  float: left;\n}\n</style>\n<body>\n  <nav>\n    <ul>\n      <li><a href=\"#classes\">Classes</a></li>\n      <li><a href=\"#nutritionPlans\">Nutrition Plans</a></li>\n      <li><a href=\"#fitnessChallenges\">Fitness Challenges</a></li>\n    </ul>\n  </nav>\n  \n  <div class=\"slider\">\n    <!-- Slides will go here -->\n  </div>\n  \n  <div class=\"content\">\n    <div class=\"colOne\">\n      <img src=\"rick.jpg\" alt=\"Fitness Photo 1\">\n      <p>Embark on a fitness journey to stay focused, motivated, and on top of your game. We're here to inspire you to achieve your fitness goals and lead an active, healthy lifestyle.</p>\n      <img src=\"rick.jpg\" alt=\"Fitness Photo 2\">\n      <p>We offer top-notch classes, nutritional plans, and challenges right here at our fitness site. Make yourself accountable, get in shape, and feel better every day.</p>\n    </div>\n  </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_2440_66.png"
+        ]
+    },
+    {
+        "id": "10333_59",
+        "messages": [
+            {
+                "content": "<image>\nDevelop HTML and CSS code necessary to emulate the layout and visuals of the website as seen in the provided screenshot. Showcase code created in harmony with material design aesthetics.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nhtml, body {\n    height: 100%;\n    margin: 0;\n    padding: 0;\n    font-family: Arial, sans-serif;\n}\n\n#header {\n    background-color: darkblue;\n    color: white;\n    text-align: center;\n    padding: 10px;\n}\n\n#content {\n    margin: 20px;\n    line-height: 1.6;\n}\n\n#footer {\n    position: fixed;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    background-color: darkblue;\n    color: white;\n    text-align: center;\n    padding: 10px;\n}\n\n#footer img {\n    width: 30px;\n    margin: 10px;\n}\n\n</style>\n<body>\n    <div id=\"header\">\n        <h1>Venture Travels</h1>\n    </div>\n    <div id=\"content\">\n        <p>Discover the best travel deals with us. Whether you're traveling for business or pleasure, we've got you covered.</p>\n        <p>Contact us now at +1 234 567 890 or info@venturetravels.com</p>\n    </div>\n    <div id=\"footer\">\n        <span>Follow us on:</span>\n        <a href=\"#\"><img src=\"rick.jpg\" alt=\"Facebook\"></a>\n        <a href=\"#\"><img src=\"rick.jpg\" alt=\"Twitter\"></a>\n        <a href=\"#\"><img src=\"rick.jpg\" alt=\"Instagram\"></a>\n    </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_10333_59.png"
+        ]
+    },
+    {
+        "id": "10270_55",
+        "messages": [
+            {
+                "content": "<image>\nAs per the screenshot displayed, craft HTML and CSS code to replicate the webpage's layout. Explain code that synchronizes with the material design analogy.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nbody {\n    margin: 0;\n    font-family: Arial, sans-serif;\n}\n.header {\n    text-align: center;\n    padding: 20px;\n    background-color: #f0f0f0;\n}\n.header img {\n    width: 200px;\n    height: 100px;\n    background-color: #ff0000;\n}\n.header button {\n    background-color: #00ff00;\n    color: #ffffff;\n    border: none;\n    padding: 10px 20px;\n    font-size: 20px;\n    margin-top: 10px;\n    cursor: pointer;\n}\ndiv {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 20px;\n    padding: 20px;\n    border: 1px solid #000000;\n}\np {\n    text-align: center;\n}\n</style>\n<body>\n    <div class=\"header\">\n        <img src=\"rick.jpg\" alt=\"Healthcare Company\">\n        <button>Schedule Appointment</button>\n    </div>\n    <div class=\"services\">\n        <h2>Our Services</h2>\n        <p>We provide personalized care for all health concerns.</p>\n    </div>\n    <div class=\"treatment\">\n        <h2>Our Treatments</h2>\n        <p>We have a variety of treatments to meet all your needs.</p>\n    </div>\n    <div class=\"success\">\n        <h2>Our Success Stories</h2>\n        <p>See the real impact of our treatments for patients.</p>\n    </div>\n    <div class=\"resources\">\n        <h2>Resources</h2>\n        <p>Education and preparation is key to managing chronic illnesses.</p>\n    </div>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_10270_55.png"
+        ]
+    },
+    {
+        "id": "7280_11",
+        "messages": [
+            {
+                "content": "<image>\nView the screenshot and fabricate its mirror image using HTML and CSS code. Write code which solidly aligns with material design.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: Arial, sans-serif;\n}\n.header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.header .logo {\n  width: 100px;\n  height: 100px;\n}\n.header nav ul {\n  display: flex;\n}\n.header nav ul li {\n  margin: 0 10px;\n}\n.header nav ul li a {\n  text-decoration: none;\n}\n.banner {\n  position: relative;\n  color: white;\n  text-align: center;\n}\n.banner-img {\n  opacity: 0.3;\n  width: 100%;\n  height: 500px;\n  object-fit: cover;\n}\n.banner p {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.services {\n  display: flex;\n  justify-content: space-between;\n}\n.services .service-img {\n  width: 100%;\n  height: 300px;\n  object-fit: cover;\n}\n.services div {\n  width: 33.33%;\n  padding: 10px;\n}\nfooter {\n  background: #f4f4f4;\n  text-align: center;\n  padding: 10px;\n}\n</style>\n<body>\n  <header>\n    <img class=\"logo\" src=\"rick.jpg\" alt=\"Wedding & Planning's Logo\">\n    <nav>\n      <ul>\n        <li><a href=\"#services\">Services</a>\n          <ul>\n            <li><a href=\"wedding_plannin.html\">Wedding Planning</a></li>\n            <li><a href=\"party_planning.html\">Party Planning</a></li>\n            <li><a href=\"event_planning.html\">Event Planning</a></li>\n          </ul>\n        </li>\n        <li><a href=\"about.html\">About</a></li>\n        <li><a href=\"contact.html\">Contact</a></li>\n      </ul>\n    </nav>\n  </header>\n  <main>\n    <h1>Wedding Planning for Every Occasion</h1>\n    <div class=\"banner\">\n      <img class=\"banner-img\" src=\"rick.jpg\" alt=\"Banner Image\">\n      <p>Welcome to Wedding & Planning, where creativity and love conquer every inch of your wedding. We're passionate about making your special day unforgettable, which is why we offer a wide variety of services to meet your unique needs.</p>\n    </div>\n    <h2>Our Services</h2>\n    <div class=\"services\">\n      <div>\n        <h3>Wedding Planning</h3>\n        <img class=\"service-img\" src=\"rick.jpg\" alt=\"Wedding Service Image\">\n        <p>Our team of wedding planners is here to help you plan your dream wedding.</p>\n      </div>\n      <div>\n        <h3>Party Planning</h3>\n        <img class=\"service-img\" src=\"rick.jpg\" alt=\"Party Planning Service Image\">\n        <p>We can also help plan birthday parties, baby showers, and other special gatherings.</p>\n      </div>\n      <div>\n        <h3>Event Planning</h3>\n        <img class=\"service-img\" src=\"rick.jpg\" alt=\"Event Planning Service Image\">\n        <p>From dinner party to business meetings, we're ready to help with all of your event planning needs.</p>\n      </div>\n    </div>\n  </main>\n  <footer>\n    <p>Wedding & Planning, Copyright &copy; 2022</p>\n  </footer>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_7280_11.png"
+        ]
+    },
+    {
+        "id": "9778_52",
+        "messages": [
+            {
+                "content": "<image>\nCreate an HTML code that will match the visual elements seen in the provided webpage's screenshot. Present the script that reflects the spirit of the material design system.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nbody {\n    font-family: Arial, sans-serif;\n}\n\n.logo {\n    width: 100px;\n    height: 50px;\n    background-color: lightgreen;\n}\n\nheader {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\nnav ul {\n    display: flex;\n    list-style: none;\n}\n\nnav ul li {\n    margin-right: 20px;\n}\n\n.carousel {\n    display: flex;\n    justify-content: space-between;\n}\n\n.carousel-item {\n    width: 30%;\n    height: 200px;\n    background-color: lightblue;\n}\n\n.search-bar {\n    margin-top: 20px;\n}\n\n.search-bar input {\n    width: 100%;\n    height: 40px;\n    padding: 0 10px;\n    outline: none;\n    border: 1px solid #ccc;\n}\n</style>\n<body>\n    <header>\n        <img src=\"rick.jpg\" alt=\"Logo\" class=\"logo\">\n        <nav>\n            <ul>\n                <li><a href=\"#\">Italian</a></li>\n                <li><a href=\"#\">Chinese</a></li>\n                <li><a href=\"#\">French</a></li>\n            </ul>\n        </nav>\n    </header>\n    <div class=\"carousel\">\n        <div class=\"carousel-item\"></div>\n        <div class=\"carousel-item\"></div>\n        <div class=\"carousel-item\"></div>\n    </div>\n    <form class=\"search-bar\" action=\"#\">\n        <input type=\"text\" placeholder=\"Find a restaurant near me\">\n        <button type=\"submit\">Search</button>\n    </form>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_9778_52.png"
+        ]
+    },
+    {
+        "id": "2942_20",
+        "messages": [
+            {
+                "content": "<image>\nDrawing from the webpage screenshot, create corresponding HTML and CSS code. Lay out code which respects the guidelines of material design styling.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\nbody {\n    font-family: Arial, sans-serif;\n    background-color: #fff;\n    color: #333;\n}\na {\n    text-decoration: none;\n    color: #333;\n}\na:hover {\n    color: #000;\n}\n.container {\n    width: 80%;\n    margin: 0 auto;\n}\n/* Header Styles */\n.header {\n    padding: 20px 0;\n    background-color: #f4a261;\n}\n.logo {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n    background-color: #2a9d8f;\n}\n/* Main Content Styles */\n.main-content {\n    padding: 50px 0;\n}\n.property-image {\n    width: 100%;\n    height: 300px;\n    background-color: #e9c46a;\n    margin-bottom: 20px;\n}\n/* Footer Styles */\n.footer {\n    padding: 30px 0;\n    background-color: #264653;\n    color: #fff;\n}\n.footer-section {\n    flex: 1;\n    text-align: center;\n}\n</style>\n<body>\n    <header class=\"header\">\n        <div class=\"container\">\n            <img src=\"rick.jpg\" alt=\"Logo\" class=\"logo\">\n        </div>\n    </header>\n    <main class=\"main-content\">\n        <section class=\"properties-section\">\n            <div class=\"container\">\n                <div class=\"property\">\n                    <div class=\"property-image\"></div>\n                    <h2>Property 1</h2>\n                    <p>Experience the best of luxury with our charming property 1.</p>\n                </div>\n                <div class=\"property\">\n                    <div class=\"property-image\"></div>\n                    <h2>Property 2</h2>\n                    <p>Elevate your living experience with property 2.</p>\n                </div>\n            </div>\n        </section>\n    </main>\n    <footer class=\"footer\">\n        <div class=\"container\">\n            <div class=\"footer-section\">\n                <h3>Locations</h3>\n                <p>Location 1</p>\n                <p>Location 2</p>\n            </div>\n            <div class=\"footer-section\">\n                <h3>Contact</h3>\n                <p>Contact Information</p>\n            </div>\n            <div class=\"footer-section\">\n                <h3>Pricing</h3>\n                <p>Pricing Information</p>\n            </div>\n        </div>\n    </footer>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_2942_20.png"
+        ]
+    },
+    {
+        "id": "7869_6",
+        "messages": [
+            {
+                "content": "<image>\nGiven the displayed webpage, build its replica using HTML code. Show the code developed according to material design principles.",
+                "role": "user"
+            },
+            {
+                "content": "<html>\n<style>\nbody {\n    font-family: Arial, sans-serif;\n    margin: 0;\n    padding: 0;\n    background-color: white;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n#logo {\n    width: 100px;\n    margin: 20px 0;\n}\n\nheader {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\nnav ul {\n    list-style: none;\n    padding: 0;\n}\n\nnav ul li {\n    display: inline;\n    margin: 0 10px;\n}\n\n.img-container {\n    width: 200px;\n    height: 200px;\n    margin: 10px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: white;\n}\n</style>\n<body>\n    <header>\n        <img src=\"rick.jpg\" alt=\"Company Logo\" id=\"logo\">\n        <nav>\n            <ul>\n                <li><a href=\"#\">Home</a></li>\n                <li><a href=\"#\">About</a></li>\n                <li><a href=\"#\">Products</a></li>\n                <li><a href=\"#\">Contact</a></li>\n            </ul>\n        </nav>\n    </header>\n    <main>\n        <div class=\"img-container\" style=\"background: lightblue;\">Product 1</div>\n        <div class=\"img-container\" style=\"background: lightblue;\">Product 2</div>\n        <div class=\"img-container\" style=\"background: lightblue;\">Product 3</div>\n        <div class=\"img-container\" style=\"background: lightblue;\">Product 4</div>\n    </main>\n</body>\n</html>",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "/mnt/lingjiejiang/multimodal_code/data/Web2Code/WebSight_images_new/image_7869_6.png"
+        ]
+    }
+]
