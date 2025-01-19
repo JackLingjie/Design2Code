@@ -186,19 +186,5 @@ if __name__ == "__main__":
                 print(f"An error occurred during processing: {e}")  
                 continue
 
-    # for filename in tqdm(test_files):
-    # 	if filename.endswith(".png"):
-    # 		try:
-    # 			if args.prompt_method == "direct_prompting":
-    # 				html = direct_prompting(model, os.path.join(test_data_dir, filename))
-
-    # 			with open(os.path.join(predictions_dir, filename.replace(".png", ".html")), "w") as f:
-    # 				f.write(html)
-    # 			print(f'file saved to {os.path.join(predictions_dir, filename.replace(".png", ".html"))}')
-    # 			if args.take_screenshot:
-    # 				take_screenshot(os.path.join(predictions_dir, filename.replace(".png", ".html")), os.path.join(predictions_dir, filename), do_it_again=True)
-    # 		except Exception as e:
-    # 			print(f"An error occurred during processing: {e}")
-    # 			continue 
 
 
