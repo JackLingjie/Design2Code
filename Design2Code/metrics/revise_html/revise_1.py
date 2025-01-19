@@ -37,16 +37,19 @@ def load_data(file_path):
   
 # Call GPT API and parse the response  
 def get_revised_html(client, html_code, prompt_template, image_path, max_tokens=2048):  
+    if not os.path.exists(image_path):
+        print(f"Image path does not exist: {image_path}")
+        return "", "", "image not exist"
     content = prompt_template.replace("{RAW_HTML}", html_code)
     # content = prompt_template.format(RAW_HTML="hello")  
     try:  
         gpt_answer, stop_reason = client.get_image_response_v2_raw(content=content, prompt2=prompt2, image=image_path, max_tokens=max_tokens)  
     except Exception as e:  
         print(f"Error calling GPT API: {e}")  
-        return ""  
+        return "", "", "exception"  
   
     if not gpt_answer:  
-        return ""  
+        return "", "", "no answer"
   
     revised_html = extract_revised_html(gpt_answer)  
     return gpt_answer, revised_html, stop_reason  
@@ -72,8 +75,12 @@ def extract_revised_html(gpt_answer):
 def process_row(index, client, row, prompt_template, max_tokens=2048):  
     html_code = row['messages'][1]['content'].strip()  # Assuming HTML is in the second message  
     image_path = row['images'][0] 
-    gpt_answer, revised_html, stop_reason = get_revised_html(client, html_code, prompt_template, image_path, max_tokens=max_tokens)  
-  
+    try:
+        gpt_answer, revised_html, stop_reason = get_revised_html(client, html_code, prompt_template, image_path, max_tokens=max_tokens)  
+    except Exception as e:
+        print(f"Error processing row {index}: {e}")
+        gpt_answer, revised_html, stop_reason = "", "", "exception"
+        
     result = {  
         'revised_html': revised_html,  
         'original_html': html_code,
@@ -98,7 +105,7 @@ def main():
     clients = [Openai(apis=[API_INFOS[i]]) for i in range(len(API_INFOS))]  
     print(f"len(clients): {len(clients)}")  
     max_tokens = 2048  
-    batch_size = 5000  
+    batch_size = 1000  
     revised_data = []  
   
     with ThreadPoolExecutor(max_workers=len(clients)) as executor:  

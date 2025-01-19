@@ -247,7 +247,7 @@ class Openai():
             except Exception as e:
                 print(e)
                 cur_retry += 1
-        return ""      
+        return "", ""      
     # def get_response(self, messages, temperature=0, max_tokens=2048):
 
 
