@@ -89,6 +89,8 @@ def main():
     # input_file = "/mnt/lingjiejiang/multimodal_code/data/Web2Code/Web2Code_onetrun_with_img_newimg.json"
     input_file = f'/mnt/lingjiejiang/multimodal_code/data/Web2Code/Web2Code_onetrun_with_img_newimg_split{MACHINE_ID}.json'
     output_dir = f'/mnt/lingjiejiang/multimodal_code/data/html_revised_{MACHINE_ID}'  
+    print(f"input_file: {input_file}")
+    print(f"output_dir: {output_dir}")
     os.makedirs(output_dir, exist_ok=True)  
   
     data = load_data(input_file)  
