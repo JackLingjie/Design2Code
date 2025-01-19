@@ -1,12 +1,13 @@
 import json  
 import subprocess  
 import os  
+import shutil  
 from concurrent.futures import ThreadPoolExecutor, as_completed  
 from tqdm import tqdm  
   
 # Define paths  
-html_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/html_files/"  
-image_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/images/"  
+html_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/new_images"  
+image_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/new_images"  
 json_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/"  
 json_output_path = os.path.join(json_output_dir, 'miss_item4.json')  
   
@@ -15,22 +16,32 @@ os.makedirs(html_output_dir, exist_ok=True)
 os.makedirs(image_output_dir, exist_ok=True)  
   
 # Load data from the file  
-html_data_path = "/mnt/unilm/shaohanh/data/code/purehtml_v4/merged.jsonl"  
+html_data_path = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/githubv4_img_rick.json"  
 miss_item = []  
   
 with open(html_data_path, "r", encoding="utf-8") as f:  
-    lines = f.readlines()  
-    data = [json.loads(line) for line in lines]  
+    data = json.load(f)
 
 # data = data[:10]
-# Function to call the external script to convert HTML file to an image  
+
 def html_file_to_image(item):  
     html_content = item.get('text')  
-    # item_id = item.get('id')  
-    # html_file_path = os.path.join(html_output_dir, f"{item_id}.html")  
-    # predict_img_path = os.path.join(image_output_dir, f"{item_id}.png")  
-    predict_img_path = item.get('images')
-    html_file_path = predict_img_path.replace('png', 'html')
+    predict_img_path = item.get('images')  
+    html_file_path = predict_img_path.replace('png', 'html')  
+      
+    # Ensure directories exist  
+    html_directory = os.path.dirname(html_file_path)  
+    img_directory = os.path.dirname(predict_img_path)  
+    os.makedirs(html_directory, exist_ok=True)  
+    os.makedirs(img_directory, exist_ok=True)  
+      
+    # Check and copy rick.jpg if not exists  
+    rick_img_path = 'img_process/rick.jpg'  
+    target_rick_path = os.path.join(img_directory, 'rick.jpg')  
+    if not os.path.exists(target_rick_path):  
+        if os.path.exists(rick_img_path):  
+            shutil.copy(rick_img_path, target_rick_path)  
+  
     # Skip conversion if the image already exists  
     if os.path.exists(predict_img_path):  
         return None  
@@ -60,7 +71,6 @@ def html_file_to_image(item):
   
 # Use ThreadPoolExecutor for multithreading  
 with ThreadPoolExecutor(max_workers=8) as executor:  
-    # Start the load operations and mark each future with its item  
     future_to_item = {executor.submit(html_file_to_image, item): item for item in data}  
     for future in tqdm(as_completed(future_to_item), total=len(data), desc="Processing HTML files"):  
         item = future_to_item[future]  

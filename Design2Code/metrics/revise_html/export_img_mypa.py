@@ -5,7 +5,7 @@ import shutil
 from concurrent.futures import ThreadPoolExecutor, as_completed  
 from tqdm import tqdm  
   
-data_file = "img_process/with_img_sampled_data_cate_modified.json"  
+data_file = "/mnt/lingjiejiang/multimodal_code/data/html_revised/final_output.json"
   
 with open(data_file, 'r') as f:  
     split_data = json.load(f)  
@@ -14,8 +14,8 @@ def process_item(item):
     html_content = item['messages'][1]['content']  
     id = item["id"]  
     # 设置 HTML 文件和图片的路径  
-    html_file_path = os.path.join('img_process/img_preview_rick', f"{id}.html")  
-    predict_img_path = os.path.join('img_process/img_preview_rick', f"{id}.png")  
+    html_file_path = os.path.join('img_preview_revised/img_preview_rick', f"{id}.html")  
+    predict_img_path = os.path.join('img_preview_revised/img_preview_rick', f"{id}.png")  
   
     # 确保目录存在  
     html_directory = os.path.dirname(html_file_path)  

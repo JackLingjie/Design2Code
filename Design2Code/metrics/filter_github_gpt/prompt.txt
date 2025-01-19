@@ -1,0 +1,83 @@
+import json  
+import os  
+from concurrent.futures import ThreadPoolExecutor, as_completed  
+from gpt4o_mini import Openai, API_INFOS  # Assuming you have this module for API calls  
+from tqdm import tqdm  
+  
+# Define the classification prompt  
+prompt_template = """  
+下面我将给出一个html的代码和其渲染出来的图片，请你帮我对这个html的图片的美观程度进行打分，打分值在0到10之间，按照最后的输出格式给出分数
+如果排版，布局工整，格式合理，打出高分
+如果页面在一个界面显示不出来，图片过长过大，打出低分
+如果包含非英语的文字，也打出一个低分
+如果包含乱码，打出低分
+## HTML:
+{}  
+
+## 渲染出来的HTML图片:
+
+## Output Format: 
+Final Score: 9
+"""  
+  
+# Load JSON data  
+def load_data(file_path):  
+    try:  
+        with open(file_path, 'r') as f:  
+            return json.load(f)  
+    except Exception as e:  
+        print(f"Error loading data from {file_path}: {e}")  
+        return []  
+  
+# Call GPT API and parse response for classification  
+def classify_image(client, problem, solution, images):  
+    content = prompt_template.format(PROBLEM=problem)  
+    with open("debug.txt", "w") as f:
+        f.write(content)
+        f.write(images)
+    try:  
+        gpt_answer = client.get_image_response_v2(content=content, prompt2=prompt2, image=images)  
+    except Exception as e:  
+        print(f"Error calling GPT API: {e}")  
+        return "N"  # Default to "N" if there's an error  
+  
+    # Extract classification result from GPT response  
+    start = gpt_answer.find("<CLASSIFY> [") + len("<CLASSIFY> [")  
+    end = gpt_answer.find("]", start)  
+    return gpt_answer[start:end].strip() if start != -1 and end != -1 else "N"  
+  
+# Process each item in the dataset  
+def process_item(index, client, item):  
+    user_message = item['messages'][0]['content'].replace("<image>", "")  
+    assistant_answer = item['messages'][1]['content']  
+    images = f"{item['image_path']}"  
+    image_correlation = classify_image(client, user_message, assistant_answer, images)  
+  
+    # Update item with classification result  
+    item['image_correlation'] = image_correlation  
+    return item  
+  
+def main():  
+    data_path = "MMCode/processed_files/gpt4o_classify_data.json"
+    output_path = "MMCode/processed_files/processed_gpt4o_330_classify.json"  
+  
+    data = load_data(data_path)  
+    # data = data[:3]  # For testing purposes, limit to 10 items
+    clients = [Openai(apis=[API_INFOS[i]]) for i in range(len(API_INFOS))]  
+    revised_data = []  
+  
+    with ThreadPoolExecutor(max_workers=len(clients)) as executor:  
+        futures = [  
+            executor.submit(process_item, i, clients[i % len(clients)], item)  
+            for i, item in enumerate(data)  
+        ]  
+  
+        for future in tqdm(as_completed(futures), total=len(futures)):  
+            revised_data.append(future.result())  
+  
+    # Save the updated data  
+    with open(output_path, 'w') as f:  
+        json.dump(revised_data, f, indent=2)  
+  
+if __name__ == "__main__":  
+    main()  

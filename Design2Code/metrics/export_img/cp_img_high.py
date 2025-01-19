@@ -4,29 +4,27 @@ import shutil
 import random  
   
 # Define paths  
-image_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html_v4/images/"  
-image_preview_dir = "image_preview/"  # Update with the actual path  
+image_output_dir = "/mnt/lingjiejiang/multimodal_code/data/github_html/images/"  
+image_preview_dir = "image_preview_8/"  # Update with the actual path  
   
 # Ensure the image_preview directory exists  
 os.makedirs(image_preview_dir, exist_ok=True)  
   
 # Load data from the file  
-# html_data_path = "/mnt/unilm/shaohanh/data/code/purehtml_v2.txt"  
-html_data_path = "/mnt/unilm/shaohanh/data/code/purehtml_v4/merged.jsonl"
-
+html_data_path = "metrics/export_img/high_score_data.json"  
+  
 with open(html_data_path, "r", encoding="utf-8") as f:  
-    lines = f.readlines()  
-    data = [json.loads(line) for line in lines]  
+    data = json.load(f)
   
 # Randomly sample 50 items  
-print(f"Total items: {len(data)}")
-sampled_data = random.sample(data, 50)  
+# sampled_data = random.sample(data, 50)  
+sampled_data = data 
   
 # Function to copy images  
 def copy_image_to_preview(item):  
     item_id = item.get('id')  
-    predict_img_path = os.path.join(image_output_dir, f"{item_id}.png")  
-  
+    # predict_img_path = os.path.join(image_output_dir, f"{item_id}.png")  
+    predict_img_path = item.get('images')
     # Copy existing image to image_preview directory if it exists  
     if os.path.exists(predict_img_path):  
         shutil.copy(predict_img_path, image_preview_dir)  
