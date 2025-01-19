@@ -2,9 +2,12 @@
   
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_prompt_added_v2_2000"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_prompt_added_v2_3000"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_prompt_added_v2_4000"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_v1_2000"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_v1_3000"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_v1_4000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_prompt_added_v2_2000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_prompt_added_v2_3000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_760k_prompt_added_v2_4000"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_filter_669k_new_img_1000"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_filter_669k_new_img_3000"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_filter_669k_new_img_4000"
