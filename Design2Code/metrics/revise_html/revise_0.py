@@ -114,7 +114,7 @@ def main():
                 with open(intermediate_file, 'w') as f:  
                     json.dump(revised_data, f, indent=0)  
   
-    final_file = os.path.join(output_dir, "final_output.json")  
+    final_file = os.path.join(output_dir, f"final_output_{MACHINE_ID}.json")  
     with open(final_file, 'w') as f:  
         json.dump(revised_data, f, indent=0)  
   
