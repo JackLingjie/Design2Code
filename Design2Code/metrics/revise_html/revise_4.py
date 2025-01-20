@@ -6,7 +6,7 @@ from gpt4o import Openai, API_INFOS
 import re  
 # Define the new prompt template for HTML refactoring  
 
-MACHINE_ID = 2
+MACHINE_ID = 4
 
 prompt_template = \
 """  
