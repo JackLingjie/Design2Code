@@ -2,10 +2,13 @@
   
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_3000"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_4000"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_5000"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_5820"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_2000"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3000"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3536"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_3000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_4000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_5000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_5820"
     # "qwen2_vl_coder-7b_3072_code_pretrain_bsz128_1e5_web2code_job_3000"
     # "qwen2_vl_coder-7b_3072_code_pretrain_bsz128_1e5_web2code_job_4000"
     # "qwen2_vl_coder-7b_3072_code_pretrain_bsz128_1e5_web2code_job_5000"
