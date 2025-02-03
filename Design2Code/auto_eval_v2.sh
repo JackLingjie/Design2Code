@@ -2,9 +2,10 @@
   
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_2000"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3000"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3536"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_code_revised_evol_50k_355"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_2000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3000"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3536"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_3000"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_4000"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_5000"
