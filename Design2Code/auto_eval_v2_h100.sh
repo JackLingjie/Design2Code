@@ -1,10 +1,15 @@
 #!/bin/bash  
-  
+export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-packages/nvidia/nvjitlink/lib:$LD_LIBRARY_PATH  
+export CUDA_VISIBLE_DEVICES=3
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_chart_revised_evol_bench_mix_v2_137k-963"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_chart_evol_bench_mix_v1_97k-685"
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_html_chartbench_mix_v3_127k_893"
+    "dpo_html_chart_mix_v3_mimic_image_7b_27k"
+    "dpo_html_chart_mix_v3_origin_image_7b_27k-386"
+    # "dpo_html_chart_mix_v3_chart_v1_origin_img_24k"
+    # "dpo_html_chart_mix_v3_chart_v2_4o_img_24k"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_chart_revised_evol_bench_mix_v2_137k-963"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_chart_evol_bench_mix_v1_97k-685"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_html_chartbench_mix_v3_127k_893"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_revised_cot_39k_276"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_html_chart_mix_v1_119k_841"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_html_chart_mix_v2_130k_917"
