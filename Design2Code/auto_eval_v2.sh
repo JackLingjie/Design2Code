@@ -2,7 +2,12 @@
   
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_code_revised_evol_50k_355"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_chart_revised_evol_bench_mix_v2_137k-963"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_chart_evol_bench_mix_v1_97k-685"
+    "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_html_chartbench_mix_v3_127k_893"
+    # "dpo_chart_mix_v2_130k_917_char_72b_47k_500"
+    # "dpo_chart_mix_v2_130k_917_char_72b_47k_674"
+    # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_code_revised_evol_50k_355"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_2000"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3000"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_web2code_rick_503k_imgstyle_v3_3536"
@@ -70,7 +75,7 @@ for model_name in "${model_names[@]}"; do
     echo "正在处理模型: $model_name" | tee -a "$log_file"  
   
     # 调用 eval_scripts/auto_eval.sh 并传入 model_name，将输出追加到同一个日志文件  
-    bash eval_scripts/auto_eval_merge_v2.sh "$model_name" 2>&1 | tee -a "$log_file"  
+    bash eval_scripts/auto_eval_merge_v2_tp2.sh "$model_name" 2>&1 | tee -a "$log_file"  
 done  
   
 echo "所有模型处理完成。" | tee -a "$log_file"  
