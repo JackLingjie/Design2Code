@@ -1,10 +1,10 @@
 #!/bin/bash  
 export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-packages/nvidia/nvjitlink/lib:$LD_LIBRARY_PATH  
-export CUDA_VISIBLE_DEVICES=3
+export CUDA_VISIBLE_DEVICES=2
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "dpo_mix190k_html_chart_code37_4oimg_89k-1260"
-    "dpo_mix190k_html_chart_code37_origin_89k-1260"
+    # "dpo_mix190k_html_chart_code37_4oimg_89k-1260"
+    # "dpo_mix190k_html_chart_code37_origin_89k-1260"
     # "stage2_qwen2_text2.5_1M_html_chart_code_data_v2_code_190k"
     # "stage2_qwen2_text2.5_500k_html_chart_code_data_v2_code_190k"
     # "stage2_qwencoder2.5_500k_html_chart_code_data_v2_code_190k"
