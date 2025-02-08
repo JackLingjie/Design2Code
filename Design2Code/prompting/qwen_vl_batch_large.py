@@ -169,7 +169,7 @@ if __name__ == "__main__":
     print(f"predictions_dir:{predictions_dir}")
 
     # Process files in batches  
-    batch_size = 32  # Adjust the batch size as necessary 
+    batch_size = 4  # Adjust the batch size as necessary 
     response = [] 
     print("begin infer")
     for i in range(0, len(test_files), batch_size):  
@@ -178,7 +178,7 @@ if __name__ == "__main__":
                 if args.prompt_method == "direct_prompting":  
                     htmls = direct_prompting_batch(model, [os.path.join(test_data_dir, f) for f in batch_files])   
                     print(len(htmls))
-                    with open(f"debug.json", "w") as f:
+                    with open(f"debug.json", "w", encoding="utf-8") as f:
                         json.dump(htmls, f, indent=4)
                     for filename, html in zip(batch_files, htmls):  
                         output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".html"))  
