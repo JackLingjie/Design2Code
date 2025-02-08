@@ -182,7 +182,7 @@ if __name__ == "__main__":
                         json.dump(htmls, f, indent=4)
                     for filename, html in zip(batch_files, htmls):  
                         output_filename = os.path.join(predictions_dir, os.path.basename(filename).replace(".png", ".html"))  
-                        with open(output_filename, "w") as f:  
+                        with open(output_filename, "w", encoding="utf-8") as f:  
                             f.write(html)  
                         print(f'file saved to {output_filename}')  
                         if args.take_screenshot:  
