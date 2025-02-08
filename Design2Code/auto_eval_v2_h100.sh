@@ -3,8 +3,23 @@ export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-
 export CUDA_VISIBLE_DEVICES=3
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "dpo_mix190k_html_chart_code37_4oimg_89k-1260"
-    "dpo_mix190k_html_chart_code37_origin_89k-1260"
+    "dpo_qwen2vl_mix_v3_fixed_127k_html_origin_7b_27k-386"
+    "dpo_qwen2vl_v1_code_190k_html_origin_image_7b_27k-386"
+    "dpo_qwentext25_html_origin_image_7b_27k-386"
+    # "qwen2vl_html_chartbench_mix_v3_127k_fixed"
+    # "dpo_qwen2vl_v3_html_chart_code37_origin_89k-1260"
+    # "dpo_qwen2vl_v1_code_190k_chart_html_origin_95k_1340"
+    # "dpo_qwen2vl_v1_code_190k_html_chart_code37_origin_89k_1260"
+    # "qwen2vl_html_chartbench_mix_v3_127k"
+    # "stage2_llm_2nodes_1e5_html_code_chart_stack_256k_1811"
+    # "dpo_mix190k_origin_image_45k_chart_bench_642"
+
+    # "stage2_llm_2nodes_1e5_html_chart_stack_data_170k"
+    # "dpo_mix190k_origin_image_7b_18k_chart_bench_score80_256"
+    # "dpo_mix190k_origin_image_7b_32k_score80"
+    # "dpo_mix190k_origin_image_7b_32k_score80"
+    # "dpo_mix190k_html_chart_code37_4oimg_89k-1260"
+    # "dpo_mix190k_html_chart_code37_origin_89k-1260"
     # "stage2_qwen2_text2.5_1M_html_chart_code_data_v2_code_190k"
     # "stage2_qwen2_text2.5_500k_html_chart_code_data_v2_code_190k"
     # "stage2_qwencoder2.5_500k_html_chart_code_data_v2_code_190k"
