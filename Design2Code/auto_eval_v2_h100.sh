@@ -3,8 +3,9 @@ export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-
 export CUDA_VISIBLE_DEVICES=3
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "dpo_qwen2vl_mix_v3_chart_dpo_v1_origin_img_24k-348"
-
+    # "dpo_qwen2vl_mix_v3_chart_dpo_v1_origin_img_24k-348"
+    
+    "dpo_html_chart_mix_v3_html_chart_code37_origin_89k-1260"
     # "dpo_qwen2vl_mix_v3_html_chart_code37_origin_89k-1260_fixed"
     # "dpo_qwentext25_html_chart_code37_origin_89k-1260"
     # "qwen2vl_html_code_chart_stack_256k-1811"
