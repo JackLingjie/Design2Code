@@ -143,7 +143,7 @@ class VllmModel:
         return generated_texts 
        
 if __name__ == '__main__':  
-    MODEL_PATH = "/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/Qwen2-VL-72B-Instruct"  
+    MODEL_PATH = "/mnt/lingjiejiang/multimodal_code/checkpoints/llms/Qwen2-VL-72B-Instruct"  
     model = VllmModel(MODEL_PATH)  
     query = "What is the text in the image?"  
     image_source = "https://modelscope.oss-cn-beijing.aliyuncs.com/resource/qwen.png"  
