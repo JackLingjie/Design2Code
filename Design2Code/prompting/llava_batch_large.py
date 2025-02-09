@@ -98,21 +98,16 @@ if __name__ == "__main__":
     parser.add_argument('--subset', type=str, default='testset_100', help='evaluate on the full testset or just a subset (choose from: {testset_100, testset_full})')
     parser.add_argument('--take_screenshot', action="store_true", help='whether to render and take screenshot of the webpages')
     parser.add_argument('--auto_insertion', type=bool, default=False, help='whether to automatically insert texts into marker positions')
-    parser.add_argument("--model_type", type=str, default="llava", help="test model type.")
+    parser.add_argument("--model_type", type=str, default="llava_large", help="test model type.")
     parser.add_argument("--model_name", type=str, default="llava-onevision-qwen2-7b-ov-hf", help="test model name.")
     parser.add_argument("--model_path", type=str, default="/mnt/lingjiejiang/textual_aesthetics/model_checkpoint/vlm_checkpoints/llava-onevision-qwen2-7b-ov-hf", help="test model path.")
 
     args = parser.parse_args()
 
-    if args.model_type == "qwen2vl":
-        from Design2Code.models.vllm_qwen import VllmModel
-        model = VllmModel(args.model_path)
-    elif args.model_type == "llama":
-        from Design2Code.models.vllm_llama import VllmModel
-        model = VllmModel(args.model_path)
-    elif args.model_type == "llava":
-        from Design2Code.models.vllm_llava import VllmModel
-        model = VllmModel(args.model_path)
+
+
+    from Design2Code.models.vllm_llava_large import VllmModel
+    model = VllmModel(args.model_path)
 
     test_data_dir = "testset_final"
     cache_dir = "./saves/"

@@ -138,24 +138,15 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.model_type == "qwen2vl":
-        from Design2Code.models.vllm_qwen import VllmModel
+        from Design2Code.models.vllm_qwen_large import VllmModel
         model = VllmModel(args.model_path)
 
     test_data_dir = "testset_final"
     cache_dir = "./saves/"
 
-    if args.prompt_method == "direct_prompting":
-        predictions_dir = cache_dir + f"{args.model_name}_direct_prompting"
-    elif args.prompt_method == "text_augmented_prompting":
-        predictions_dir = cache_dir + "gpt4o_text_augmented_prompting"
-    elif args.prompt_method == "layout_marker_prompting":
-        predictions_dir = cache_dir + "gpt4o_layout_marker_prompting" + ("_auto_insertion" if args.auto_insertion else "") 
-    elif args.prompt_method == "revision_prompting":
-        predictions_dir = cache_dir + "gpt4o_visual_revision_prompting"
-        orig_data_dir = cache_dir + args.orig_output_dir
-    else: 
-        print ("Invalid prompt method!")
-        exit()
+    if args.model_type == "qwen2vl":
+        from Design2Code.models.vllm_qwen_large import VllmModel
+        model = VllmModel(args.model_path)
     
     ## create cache directory if not exists
     os.makedirs(predictions_dir, exist_ok=True)

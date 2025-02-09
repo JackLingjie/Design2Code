@@ -169,7 +169,7 @@ if __name__ == "__main__":
     print(f"predictions_dir:{predictions_dir}")
 
     # Process files in batches  
-    batch_size = 4  # Adjust the batch size as necessary 
+    batch_size = 32  # Adjust the batch size as necessary 
     response = [] 
     print("begin infer")
     for i in range(0, len(test_files), batch_size):  
