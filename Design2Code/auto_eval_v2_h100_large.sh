@@ -1,5 +1,5 @@
 #!/bin/bash  
-export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-packages/nvidia/nvjitlink/lib:$LD_LIBRARY_PATH  
+# export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-packages/nvidia/nvjitlink/lib:$LD_LIBRARY_PATH  
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
