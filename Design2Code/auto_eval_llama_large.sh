@@ -41,4 +41,6 @@ for model_name in "${model_names[@]}"; do
     bash prompting/llama_batch_large.sh "$model_name" 2>&1 | tee -a "$log_file"  
 done  
   
+echo "run_gpu" 
+python run_gpu.py
 echo "所有模型处理完成。" | tee -a "$log_file"  
