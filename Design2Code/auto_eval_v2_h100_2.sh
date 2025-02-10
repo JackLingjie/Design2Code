@@ -3,7 +3,10 @@ export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-
 export CUDA_VISIBLE_DEVICES=2
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "dpo_qwen2vl_mix_v3_fixed_chart_4o_code_score80_42k-604"
+    "qwen2vl_html_tag_80k_v2" 
+    # "dpo_qwen2vl_html_chart_stack_data_193k_html_chart_code37_origin_89k_epoch1"
+    # "dpo_html_chart_mix_v3_html_chart_code37_origin_89k-1260"
+    # "dpo_qwen2vl_mix_v3_fixed_chart_4o_code_score80_42k-604"
     # "qwen2vl_html_chart_stack_data_193k"
     # "stage2_qwen2_text2.5_1M_html_chart_stack_data_193k-1362"
     # "dpo_mix190k_v2_html_code37_origin_64k_epoch1"
@@ -40,8 +43,8 @@ model_names=(
     # "dpo_html_chart_mix_chart_html_code_4o_95k-500"
     # "dpo_html_chart_mix_v3_chart_html_origin_95k-500"
     # "dpo_html_chart_mix_v3_4o_code_score80_42k-604"
-    "dpo_qwen2vl_v1_code_190k_origin_chart_24k_html_mix52k-734"
-    "dpo_qwen2vl_v1_raw_190k_origin_chart_24k_html_mix52k-734"
+    # "dpo_qwen2vl_v1_code_190k_origin_chart_24k_html_mix52k-734"
+    # "dpo_qwen2vl_v1_raw_190k_origin_chart_24k_html_mix52k-734"
     # "dpo_chart_html_origin_41k_72b-580"
     # "dpo_chart32k_html_60k-844"
     # "qwen2vl_chart_code_data_v1_raw_190k—1342"
@@ -54,7 +57,7 @@ model_names=(
     # "dpo_html_chart_mix_v3_origin_image_7b_32k_score70-458"
     # "dpo_origin_image_7b_24k_raw-348"
     # "stage2_llm_2nodes_1e5_html_chart_code_data_v1_raw_190k-1342"
-    "stage2_llm_2nodes_1e5_html_chart_code_data_v2_code_190k-1342"
+    # "stage2_llm_2nodes_1e5_html_chart_code_data_v2_code_190k-1342"
     # "stage2_llm_2nodes_1e5_web2code_bsz128_1e5_html_chart_stack_data_193k-1362"
     # "dpo_html_chart_mix_v3_chart_v1_origin_img_24k"
     # "dpo_html_chart_mix_v3_chart_v2_4o_img_24k"

@@ -3,9 +3,10 @@ export LD_LIBRARY_PATH=/home/lidong1/miniconda3/envs/design/lib/python3.10/site-
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 # 定义一个数组，包含所有需要处理的模型名称  
 model_names=(  
-    "qwen72b_html_chartbench_mix_v3_127k-893"
-    "qwen72b_html_chart_stack_data_193k-1362"
-    "qwen72b_html_chart_code_data_v2_code_190k_1343"
+    "Llama-3.2-90B-Vision-Instruct"
+    # "qwen72b_html_chartbench_mix_v3_127k-893"
+    # "qwen72b_html_chart_stack_data_193k-1362"
+    # "qwen72b_html_chart_code_data_v2_code_190k_1343"
 
 )  
   
@@ -37,7 +38,7 @@ for model_name in "${model_names[@]}"; do
     echo "正在处理模型: $model_name" | tee -a "$log_file"  
   
     # 调用 eval_scripts/auto_eval.sh 并传入 model_name，将输出追加到同一个日志文件  
-    bash eval_scripts/auto_eval_merge_v2_large.sh "$model_name" 2>&1 | tee -a "$log_file"  
+    bash prompting/llama_batch_large.sh "$model_name" 2>&1 | tee -a "$log_file"  
 done  
   
 echo "所有模型处理完成。" | tee -a "$log_file"  
